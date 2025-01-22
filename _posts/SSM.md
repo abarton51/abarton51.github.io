@@ -1,0 +1,151 @@
+[Good video explanation](https://www.youtube.com/watch?v=9dSkvxS2EB0&t=723s)
+- Timestamp 11:44
+	- "It really excels when you need really really long sequences like DNA modeling or audio waveforms and so on. Having a long context and being efficient with that is probably more important than this super ability of transformers to focus in on individual states."
+
+https://www.youtube.com/watch?v=8Q_tqwpTpVU
+
+
+# Structured State Space Models for Deep Sequence Modeling
+https://www.youtube.com/watch?v=OpJMn8T7Z34
+- [[#SSM Mechanics|SSM Mechanics]]
+- [[#Structure State Space (S4)|Structure State Space (S4)]]
+
+### Deep Sequence Model
+- Using a State Space Model layer incorporated into a deep model.
+- SSMs are classical **statistical** model.
+	- "1 layer", **linear** model
+	- **Probabilistic model** of data generating process.
+- New perspective and uses in **deep learning** starting with S4.
+	- Deep, **non-linear** model.
+	- Deterministic transformation (**feature extraction**).
+
+### Outline
+- SSM Mechanics
+- Structured State Spaces (S4) for long-range dependencies
+- Deep SSMs: perspectives and directions
+
+## SSM Mechanics
+
+### SSMs
+- Simple model defined by a differential equation.
+$$  x'(t)  = Ax(t) + Bu(t)$$
+ $$  y(t) = Cx(t) + Du(t)  $$
+ - First appeared in controls.
+ - First SSM was the Kalman filter.
+
+**Goal**: Sequence model maps sequence to sequence.
+- Suffices to map 1-D sequence to 1-D sequence.
+- SSMs map 1-D **function** to 1-D **function** instead of sequences to sequences.
+
+Take in an input $u(t)$ which is then passed through a differential equation, parametrized by $A$ and $B$, which maps it into a higher dimensional function $x$. This gives us a deterministic output $x$. $B$ is like a column vector, and $A$ is a square matrix that defines the differential equation relationship between $x$ (state) and $x'$.
+
+Then we map the state $x$ to the output $y$ from the higher dimension representation back down to the 1-D representation. $C$ is a row vector that essentially projects the features of the state down to the output space.
+
+$u$: input function.
+$x$: latent function.
+$y$: output function.
+
+### Continuous Representation
+- Operates on **signals** and sequences.
+- This map operates on functions, not just sequences.
+	- Benefits are that functions are more general than sequences.
+		- Can always discretize the function to produce a sequence.
+- Some types of data are actually based on an underlying **signal**, like audio data. Which provides inductive bias for this model.
+### Computing with SSMs: Recurrent View
+**Motivation**: In the real world, data is in the form of sequences.
+
+How do we make this continuous model work on sequences?
+$$  x'(t)  = Ax(t) + Bu(t)$$ $$  y(t) = Cx(t) + Du(t)  $$
+Euler Discretization: $$  \begin{gather} x(t + \Delta) \approx x(t) + \Delta x'(t) \\ = x(t) +  \Delta(Ax(t) + Bu(t))  \\  = x(t) + \Delta Ax(t) + \Delta B u(t) \\ = (I + \Delta A)x(t) + \Delta B u(t) \\ = \overline{A} x(t) + \overline{B}u(t) \end{gather} $$
+Note the first line is just a first-order approximation of $x(t + \Delta)$.
+
+1. Discretize: $\overline{A} = I + \Delta A$
+2. Recurrent "hidden state": $x_k = \overline{A}x_{k-1} + \overline{B}u_k$
+3. Out projection: $y_k = \overline{C} x_{k-1} + \overline{D}u_k$
+
+We can turn this continuous time model into a discrete time recurrent update. So, this can be unrolled as a linear RNN.
+
+RNNs are defined by updating based on previous hidden state and current input. This is essentially the same thing.
+
+Recurrent dynamics are given by $A$.
+
+Underlying parameters are $A, B, C, D$, and $\Delta$ (step-size). First step in computation graph would be to follow these fixed formulas to generate the discrete matrixes $\overline{A}, \overline B$, and then  those are the matrices that define the recurrence which is what you'll use to step the model and compute.
+
+This is an efficient **autoregressive** computation of **state**.
+
+RNNs have nice properties because they are recurrent and have this finite sized state. This autoregressive computation is really fast in RNNs since the hidden state size is constant, so every time step takes a constant amount of time. 
+
+Next **output** depends on the **entire input**, but can be computed in **constant** time.
+
+Not true for transformers - slows down the longer the sequence.
+
+Efficient **online**/autoregressive computation.
+
+Downside of recurrence - if you know your entire input sequence in advance since it's completely sequential and you have to unroll this one at a time. Can't leverage parallel computations.
+
+### Computing with SSMs: Convolution View
+How to be efficient when we have all the input data?
+
+Note: We exclude the $\overline D$ because it's easy to compute so we can ignore it.
+
+$$ \begin{gather} x_k = \overline A x_{k-1} + \overline B u_k \\  y_k = \overline C x_k   \end{gather} $$
+**Can explicitly unroll the linear recurrence in closed form.**
+
+The first state $x$ is $x_0 = \overline B u_0$. The second is $x_1 = \overline A \overline B u_0 + \overline B u_1$. The third is $x_2 = \overline{A}^2\overline B u_0 + \overline A \overline B u_1 + \overline B u_2$, and so on...
+
+The output is essentially a linear projection of this.
+The first output is $y_0 = \overline C \overline B u_0$, the second is $y_1 = \overline C \overline a \overline B u_1 + \overline C \overline B u_1$, the third is $y_2 = \overline C \overline A^2\overline B u_0 + \overline C \overline A \overline B u_1 + \overline C \overline B u_2$, and so on...
+
+This is a map from the sequence $u$ to the sequence $y$. Every element of the output sequence we have a closed formula for in terms of the input. 
+
+The general form is:
+
+$$  y_k = \overline C\overline A^k \overline B u_0 + \overline C \overline A^{k-1}\overline B u_1 + \cdots + \overline C \overline A \overline B u_{k-1} + \overline C \overline B u_k  $$
+Without needing to unroll the recurrence, we can unroll analytically.
+
+$$ \begin{gather} \overline K \in \mathbb{R}^L := \big( \overline C \overline B, \overline C \overline A \overline B, \ldots, \overline C\overline A^{L-1}\overline B  \big)   \\ y = \overline K * u    \end{gather}  $$
+Notice, that this is really a convolution.
+
+Can be computed with convolutions, similar to CNNs.
+
+We have our SSM parameters, $A, B, C$, we discretize them to $\overline A, \overline B, \overline C$, (note that $\overline C = C$) and we use that to define from this formula a vector call $\overline K$, which is the same length as the sequence.
+
+$\overline K$ is what we call the SSM convolution kernel because the output $y$ is a single convolution with the input $u$ from the kernel. Note that the kernel is implicitly infinitely long. In practice we truncate to the length of the sequence.
+
+This is an implicit convolution.
+
+**Output** can be computed without computing the **state**. Can write out computation from input to output as convolution $y = u * K$. 
+
+Parallelizable + nearly-linear computation. Efficient **parallelizable** computation.
+
+Can view a local CNN as an SSM where the A matrix is like a shift matrix and the state is just a buffer of the history.
+## Structure State Space (S4)
+- S4: a special state space model.
+- S4 variants and simplifications.
+- Modeling signals with S4.
+
+SSM + HiPPO + Structure Matrices = S4
+
+We are going to take the basic SSM and then use special formulas for the $A$ and $B$ matrices.
+	Called HiPPO matrices.
+
+Learn the **parameters** with special algorithm.
+
+### The HiPPO Operator
+- $x' = Ax + Bu$. 
+	- $u(t) \to HiPPO \to x(t)$.
+- Specifies fixed formulas for A and B. HiPPO is a map from a input $u$ to a state $x$.
+- If you're taking this equation, and you're getting inputs, and updating your state, can you come up with a state that has a meaningful representation.
+- Design **state** to encode the **input's entire history**.
+	- Should allow to have long range dependencies.
+
+- Observe input sequence: $u_1, u_2, u_3, \ldots$
+- At every time, evolve "memory": $x_1, x_2, x_3, \ldots\in \mathbb{R}^N$
+- Can current state be used to **reconstruct** history of inputs?
+	- $x_t \to u_1, u_2, \ldots, u_t$.
+	- This is called online function reconstruction.
+- The HiPPO operator is: $x'(t) = Ax(t) + Bu(t)$. 
+	- Called an operator because you're thinking of this as a function to function map.
+- The HiPPO matrix is:
+
+$$\begin{gather} A_{nk} = \begin{cases} 0 & n < k \\ n+1 & n=k \\ 2n+1 & n > k  \end{cases}   \end{gather}$$

@@ -56,7 +56,7 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
+  provider               :  "false" # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          :
 
@@ -64,7 +64,7 @@ analytics:
 # Site Author
 author:
   name             : "Austin"
-  avatar           : "mtn-bike.webp"
+  avatar           : "bio-photo.jpg"
   bio              : "Undergraduate Math and CS @ GA Tech"
   location         : "Atlanta, GA"
   employer         :
