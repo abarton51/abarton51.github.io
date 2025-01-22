@@ -1,1 +1,1 @@
-Personal website using [this repository](https://github.com/academicpages/academicpages.github.io). Work in progress.
+Personal website using [this template](https://github.com/academicpages/academicpages.github.io)
