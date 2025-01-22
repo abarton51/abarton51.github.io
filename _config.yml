@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Austin B., Professional Website"
+title                    : "Home"
 title_separator          : "-"
 name                     : &name "Austin B."
 description              : &description "Personal website and portfolio."
@@ -64,7 +64,7 @@ analytics:
 # Site Author
 author:
   name             : "Austin"
-  avatar           : "purg-pic.jpg"
+  avatar           : "purg-pic.webp"
   bio              : "Undergraduate Math and CS @ GA Tech"
   location         : "Atlanta, GA"
   employer         :
