@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Austin B., Professional Website"
+title                    : "Home"
 title_separator          : "-"
 name                     : &name "Austin B."
 description              : &description "Personal website and portfolio."
