@@ -84,5 +84,3 @@ At test time, RAG-Sequence and RAG-Token require different ways to approximate $
 	- To estimate the probability of a hypothesis $y$, they run an additional forward pass for each document $z$ for which $y$ does not appear in the beam, multiply the generator probability with $p_\eta(z|x)$ and then sum the probabilities across beams for the marginals.
 	- This is called "Thorough Decoding". 
 
-
-
