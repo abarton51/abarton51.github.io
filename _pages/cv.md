@@ -61,6 +61,6 @@ Skills
 Projects
 ======
   <ul>{% for post in site.portfolio %}
-   {% include portfolio.html %}
+   {% include archive-single.html %}
   {% endfor %}</ul>
 
