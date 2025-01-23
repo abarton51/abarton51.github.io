@@ -1,3 +1,13 @@
+---
+title: "JMM '24 - Things I Learned"
+excerpt: "Notes on Interesting Talks at JMM '24."
+collection: portfolio
+---
+
+I attended the 2024 Joint Mathematics Meeting to present a poster on research I did as part of an REU at NC State University. You can check out the research in the navigation bar.
+
+The time I spent there with my friends and peers from the previous summer was amazing. Mathematicians from all over the world gather there to present the most cutting edge research in mathematics to their peers and bright-eyed students like myself. While I was there, I took some notes on the things I learned.
+
 # Things I Learned About
 ## VC Dimension
 The **Vapnik-Chervonenkis dimension**, more commonly known as the VC dimension, is a model capacity measurement used in statistics and machine learning. It is termed informally as a measure of a model’s capacity. It is used frequently to guide the model selection process while developing machine learning applications. To understand the VC dimension, we must first understand shattering. [1](https://www.educative.io/answers/what-is-the-vc-dimension) 
