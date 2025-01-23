@@ -1,8 +1,9 @@
-# RAG Paper Notes
+## Paper Notes for RAG for Knowledge Intensive Tasks
 
 Paper Title: **Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks**
 
 ### Abstract
+
 - Large pre-trained language models have been shown to store factual knowledge in their parameters.
 - Downfall is that their ability to access and manipulate knowledge is limited.
 - Struggle or fail to provide provenance for their decisions and updating their world knowledge.
@@ -12,6 +13,7 @@ Paper Title: **Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks*
 - Non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever.
 
 ### Introduction
+
 - Pre-trained neural language models learn substantial amount of in-depth knowledge from data.
 - Cannot easily expand or revise their memory.
 - Can't straightforwardly provide insight into their predictions, and may produce hallucinations.
@@ -32,6 +34,7 @@ Paper Title: **Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks*
 - RAG can be fine-tuned on any seq2seq task, whereby both the generator and the retriever are jointly learned.
 
 ### Methods
+
 - Use the input sequence $x$ to retrieve text documents $z$ and use them as additional context when generating the target sequence $y$.
 - Models leverage two components
 1. A retriever $p_{\eta}(z|x)$ with parameters $\eta$ that returns (top-K truncated) distributions over text passages given a query $x$
@@ -42,6 +45,7 @@ Paper Title: **Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks*
 	- In the second approach, RAG-Token, can predict each target token based on a different document.
 
 #### 2.1 Models
+
 - **RAG-Sequence**: Uses the same retrieved document to generate the complete *sequence*. Treats the retrieved document as a single latent variable that is marginalized to get the seq2seq probability $p(y|x)$ via a top-K approximation. 
 	- The top $K$ documents are retrieved using the retriever, and the generator produces the output sequence probability for each document, which are then marginalized,
 $$p_{\text{RAG-Sequence}}(y|x) \approx \sum_{z\in \text{top-k}(p(\cdot | x))} p_{\eta}(z|x)p_{\theta}(y|x, z) = \sum_{z\in \text{top-k}(p(\cdot | x))} p_{\eta}(z|x)\prod_i^N p_\theta (y_i|x, z, y_{1:i-1})$$
@@ -52,6 +56,7 @@ $$p_{\text{RAG-Token}}(y|x) \approx \prod_{i}^N \sum_{z\in \text{top-k}p(\cdot|x
 - Note that RAG can be used for sequence classification tasks by considering the target class as a target sequence of length one, in which case RAG-Sequence and RAG-Token are equivalent.
 
 #### 2.2 Retriever: DPR
+
 The retrieval component $p_{\eta}(z|x)$ is based on DPR. DPR follows a bi-encoder architecture:
 $$ p_\eta(z|x)\propto \exp(d(z)^T q(x)) $$
 where $d(z) = \text{BERT}_d(z), q(x) = \text{BERT}_q(x)$. 
@@ -62,12 +67,14 @@ Calculating the $\text{top-k}(p_\eta(z|x))$, the list of $k$ documents $z$ with 
 - Non-parametric memory refers to the document index.
 
 #### 2.3 Generator: BART
+
 The generator component $p_\theta(y_i|x, z, y_{1:i-1})$ could be modeled using any encoder-decoder but they use BART-large, a pre-trained seq2seq transformer with 400M parameters.
 
 - To combine the input $x$ with the retrieved content $z$ when generating BART, they simply concatenate them.
 - Parametric memory refers to the BART generator.
 
 #### 2.4 Training
+
 Jointly train the retriever and generator components without any direct supervision on what document should be retrieved.
 
 Given a fine-tuning training corpus of input/output pairs $(x_j, y_j)$, they minimize the negative marginal log-likelihood of each target, $\sum_j - \log p(y_j|x_j)$ using SGD with Adam optimizer.
@@ -76,6 +83,7 @@ Given a fine-tuning training corpus of input/output pairs $(x_j, y_j)$, they min
 - They don't find this to be necessary and keep the document encoder and index fixed, only fine-tuning the query encoder $\text{BERT}_q$ and the BART generator.
 
 #### 2.5 Decoding
+
 At test time, RAG-Sequence and RAG-Token require different ways to approximate $\arg \max_y p(y|x)$.
 
 - **RAG-Token**: The RAG-Token model can be seen as a standard, autoregressive seq2seq generator with transition probability: $p_\theta'(y_i|x, y_{1:i-1})$. To decode, we can plug this probability into a standard beam search decoder.
