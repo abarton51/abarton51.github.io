@@ -6,9 +6,6 @@ main:
   - title: "Portfolio"
     url: /portfolio/
 
-  - title: "Talks"
-    url: /talks/
-
   - title: "Blog Posts"
     url: /year-archive/
 
