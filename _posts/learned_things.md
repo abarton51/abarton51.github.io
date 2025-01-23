@@ -1,6 +1,7 @@
 ---
 title: "JMM '24 - Things I Learned"
 excerpt: "Notes on Interesting Talks at JMM '24."
+permalink: /posts/learned_things.md/
 collection: portfolio
 ---
 
