@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  align-text: center;
+  text-align: center;
   margin-top: 0;
   font-size: $type-size-1;
 }
@@ -313,4 +313,24 @@ nav {
 b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a, tr, td, form button, input[type="submit"], .btn, .highlight, .archive__item-teaser {
   -webkit-transition: $global-transition;
   transition: $global-transition;
+}
+
+/* Dropdown menu styles */
+.author__urls {
+  background-color: #d9edd9; /* Change this to your desired background color */
+  color: #224; /* Change text color */
+  border: 1px solid #d7ac75; /* Optional border */
+  border-radius: 4px; /* Optional rounded corners */
+  padding: 8px; /* Add padding for spacing */
+}
+
+/* Change link styles within the dropdown */
+.author__urls a {
+  color: #007acc; /* Link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.author__urls a:hover {
+  color: #005f99; /* Hover color for links */
+  text-decoration: underline; /* Optional hover underline */
 }
