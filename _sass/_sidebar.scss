@@ -88,7 +88,7 @@
 
     @include breakpoint($large) {
       padding: 5px;
-      border: 1px solid $border-color;
+      border: 1px solid #91ada2;
     }
   }
 }
@@ -226,7 +226,7 @@
     padding-right: 5px;
     padding-top: 2px;
     padding-bottom: 2px;
-    color: inherit;
+    color: #055291;
     font-size: $type-size-5;
     text-decoration: none;
 
