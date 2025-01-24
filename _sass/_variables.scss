@@ -53,19 +53,18 @@ $darker-gray                : mix(#000, $gray, 60%);
 $light-gray                 : mix(#fff, $gray, 50%);
 $lighter-gray               : mix(#fff, $gray, 90%);
 
-$body-color                 : #3c2425;
-$background-color           : #8c8979;
-$code-background-color      : #303330;
-$code-background-color-dark : #223222;
-$text-color                 : #c8c6ac;
-$border-color               : #dcd7ba;
-$border-color-two           : #943b3c;
+$body-color                 : $gray;
+$background-color           : $gray;
+$code-background-color      : #fafafa;
+$code-background-color-dark : $light-gray;
+$text-color                 : $dark-gray;
+$border-color               : $lighter-gray;
 
 $primary-color              : #7a8288;
 $success-color              : #62c462;
 $warning-color              : #f89406;
 $danger-color               : #ee5f5b;
-$info-color                 : #8d9bc3;
+$info-color                 : #52adc8;
 
 /* brands */
 $behance-color              : #1769FF;
