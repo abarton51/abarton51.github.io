@@ -55,13 +55,13 @@ $lighter-gray               : mix(#fff, $gray, 90%);
 
 $body-color                 : $gray;
 $background-color           : #333333 ;
-$primary-color              : #d3d3d3;
+$primary-color              : #111122;
 $border-color               : mix(#fff, $background-color, 20%);
 $code-background-color      : mix(#000, $background-color, 15%);
 $code-background-color-dark : mix(#000, $background-color, 20%);
 $form-background-color      : mix(#000, $background-color, 15%);
 $footer-background-color    : mix($primary-color, #000, 10%);
-$text-color                 : #e9ffe9;
+$text-color                 : #e9f9f9;
 
 $success-color              : #62c462;
 $warning-color              : #f89406;
