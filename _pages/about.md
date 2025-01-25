@@ -20,7 +20,7 @@ I have a growing passion in cybersecurity and information technology and I am in
 
 Currently, I am planning on attending a Master of Science in Computing (or a closely related discipline) with a focus on secure computing. If you are looking for enthusiastic students or researchers in these areas feel free to contact me!
 
-In my free time I like to train crossfit, BJJ, and Muay Thai. I love the outdoors and sports/activities such as mountian biking, climbing, surfing, and snowboarding. This summer I plan on living out of my car that I've converted into a compact overlander and hike, mountain bike, and rock climb beautiful places like the Tetons, Yosemite, North Cascades, BC rockies, and Montana.
+In my free time I like to train crossfit, BJJ, and Muay Thai. I love the outdoors and sports/activities such as mountian biking, climbing, surfing, and snowboarding.
 
 I am a Linux user and a FOSS enthusiast. Currently my daily driver is Linux Mint. If you're interested in some of my configuration you can check out my Neovim config and dot files on my Github. After I graduate, I'll probably be switching to Arch and have been using it and experimenting through a VM in my free time. If you have suggestions on desktop environments for a daily driver laptop with no GPU please send them my way! Currently, I like the i3wm tiling window manager.
 
