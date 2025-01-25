@@ -49,36 +49,27 @@ social:
 
 # Site Author
 author:
-  name             : "Austin"
+  name             : "Austin B."
   avatar           : "purg-pic.webp"
   bio              : "Undergraduate Math and CS @ GA Tech"
   location         : "Atlanta, GA"
   employer         :
   pubmed           : #"https://www.arxiv.org"
   googlescholar    : #"https://scholar.google.com/"
-  email            : #"abarton40@gatech.edu"
-  # researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
+  email            : "abarton40@gatech.edu"
+  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
   foursquare       :
   github           : "abarton51"
-  google_plus      :
   keybase          :
   instagram        :
-  impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
-  lastfm           :
-  linkedin         : "https://www.linkedin.com/in/abarton01/"
+  linkedin         : "abarton01"
   orcid            : # "http://orcid.org/yourorcidurl"
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
   twitter          : # "replacethistwitterhandle"
-  vine             :
-  weibo            :
-  xing             :
   youtube          :
   wikipedia        :
 
