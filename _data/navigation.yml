@@ -9,3 +9,6 @@ main:
   - title: "Posts"
     url: /year-archive/
 
+  - title: "Personal"
+    url: /personal/
+
