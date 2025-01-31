@@ -8,6 +8,62 @@ redirect_from:
   - /cv
 ---
 
+
+<!-- Trigger Button -->
+<a href="#" id="open-modal">Click here to view the PDF</a>
+
+<!-- Modal -->
+<div id="pdf-modal" style="display:none;">
+  <div id="pdf-modal-content">
+    <iframe src="{{ site.baseurl }}/assets/pdfs/Barton_Austin_T_Resume-2.pdf" width="100%" height="95%"></iframe>
+    <button id="close-modal">Close</button>
+  </div>
+</div>
+
+<!-- Add some basic styles for the modal -->
+<style>
+  #pdf-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #pdf-modal-content {
+    background: #11111a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 1000px;
+    height: 80%;
+    max-height: 90%;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+  #pdf-modal iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+</style>
+
+<!-- JavaScript to control modal -->
+<script>
+  document.getElementById("open-modal").addEventListener("click", function(event) {
+    event.preventDefault();
+    document.getElementById("pdf-modal").style.display = "flex";
+  });
+
+  document.getElementById("close-modal").addEventListener("click", function() {
+    document.getElementById("pdf-modal").style.display = "none";
+  });
+</script>
+
 [Resume - PDF Version](https://github.com/abarton51/abarton51.github.io/blob/master/_files/Barton_Austin_T_Resume-2.pdf)
 
 {% include base_path %}
