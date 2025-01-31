@@ -8,6 +8,8 @@ redirect_from:
   - /cv
 ---
 
+[Resume - PDF Version](https://github.com/abarton51/abarton51.github.io/blob/master/_files/Barton_Austin_T_Resume-2.pdf)
+
 {% include base_path %}
 
 ## Education
