@@ -30,7 +30,7 @@ This is my personal corner of my website for things like goals, tracking habits,
 
 ### Reading
 
-I read a book every night for at least 20 minutes. It's also a part of my sleep preparation ritual.
+- Read every night $\geq$ 20 minutes.
 
 ## :book: Reading List
 
@@ -111,6 +111,29 @@ I've come to acknowledge just how important and beneficial reading can be, even 
 
 This isn't to say YouTube videos and cinema don't have their place or are inferior to books. I just think they are every different and serve different purposes.
 
+## Personal Accomplishment Tracker
+
+### Lifting
+
+- Back Squat: 425 lb.
+- Bench: 315 lb.
+- Deadlift: 500 lb.
+- Snatch: 135 lb.
+- OHS: 155 lb.
+- Clean: 225 lb.
+- Jerk: 225 lb.
+
+### Running
+
+- 1:50:24 Half Marathon
+- 18:50 3 mi.
+- 5:01 1 mi.
+
+### Climibing
+
+- V7 boulder (gym)
+- 5.11 single pitch, sport/lead (gym)
+- 5.10d  single pitch, sport/lead (outdoor)
 
 ---
 
