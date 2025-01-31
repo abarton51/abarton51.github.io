@@ -22,5 +22,5 @@ I am interested in researching applications and theory at the intersection of da
 
 In my free time I like to train crossfit, BJJ, and Muay Thai. I love the outdoors and sports/activities such as mountian biking, climbing, surfing, and snowboarding.
 
-![](../images/me_collage.png)
+![](../images/me_collage-1.png)
 
