@@ -64,7 +64,7 @@ redirect_from:
   });
 </script>
 
-[Resume - PDF Version](https://github.com/abarton51/abarton51.github.io/blob/master/_files/Barton_Austin_T_Resume-2.pdf)
+[Download Resume - PDF Version](https://github.com/abarton51/abarton51.github.io/blob/master/_files/Barton_Austin_T_Resume-2.pdf?raw=true){:target="_blank"}
 
 {% include base_path %}
 
