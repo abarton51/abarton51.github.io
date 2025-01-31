@@ -6,7 +6,7 @@ redirect_from:
   - /personal
 ---
 
-This is my personal corner of my website for things like goals, tracking habits, thoughts, etc.
+This is my personal corner for things like goals, tracking habits, thoughts, etc.
 
 ## 🚀 Endeavors and Habits
 
@@ -113,6 +113,8 @@ This isn't to say YouTube videos and cinema don't have their place or are inferi
 
 ## Personal Accomplishment Tracker
 
+All time personal accomplishments tracker.
+
 ### Lifting
 
 - Back Squat: 425 lb.
@@ -133,7 +135,7 @@ This isn't to say YouTube videos and cinema don't have their place or are inferi
 
 - V7 boulder (gym)
 - 5.11 single pitch, sport/lead (gym)
-- 5.10d  single pitch, sport/lead (outdoor)
+- 5.10b  single pitch, sport/lead (outdoor)
 
 ---
 
