@@ -9,7 +9,7 @@
 locale                   : "en-US"
 title                    : "Home"
 title_separator          : "-"
-name                     : &name "Austin B."
+name                     : &name "Austin Barton"
 description              : &description "Personal website and portfolio."
 url                      : https://abarton51.github.io
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -49,8 +49,8 @@ social:
 
 # Site Author
 author:
-  name             : "Austin B."
-  avatar           : "purg-pic.webp"
+  name             : "Austin Barton"
+  avatar           : "headshot.png"  #"purg-pic.webp"
   bio              : "Undergraduate Math and CS @ GA Tech"
   location         : "Atlanta, GA"
   employer         :
