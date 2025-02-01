@@ -34,6 +34,7 @@ redirect_from:
   }
 
   #pdf-modal-content {
+    position: relative;
     background: #11111a;
     padding: 20px;
     border-radius: 10px;
@@ -43,11 +44,47 @@ redirect_from:
     max-height: 90%;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
 
   #pdf-modal iframe {
-      width: 100%;
-      height: 100%;
-    }
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Styled Close Button */
+  #close-modal {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: linear-gradient(145deg, #323244, #1f1f2f);
+    border: 2px solid rgba(221, 221, 221, 0.2);
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #dddddd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 
+      3px 3px 6px rgba(0, 0, 0, 0.4),
+      -1px -1px 4px rgba(255, 255, 255, 0.05);
+  }
+
+  #close-modal:hover {
+    color: #eeeeee;
+    background: linear-gradient(145deg, #aa1111, #440000);
+    border-color: ##440000;
+    transform: translateY(-1px);
+    box-shadow: 
+      4px 4px 8px rgba(0, 0, 0, 0.5),
+      -1px -1px 4px rgba(255, 255, 255, 0.1);
+  }
+
+  #close-modal:active {
+    transform: translateY(1px);
+    box-shadow: 
+      2px 2px 4px rgba(0, 0, 0, 0.4),
+      -1px -1px 4px rgba(255, 255, 255, 0.05);
   }
 </style>
 
