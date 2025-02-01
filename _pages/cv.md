@@ -8,9 +8,8 @@ redirect_from:
   - /cv
 ---
 
-
 <!-- Trigger Button -->
-<a href="#" id="open-modal">Click here to view the PDF</a>
+<a href="#" id="open-modal">View or Download the PDF Version Here</a>
 
 <!-- Modal -->
 <div id="pdf-modal" style="display:none;">
@@ -38,7 +37,7 @@ redirect_from:
     background: #11111a;
     padding: 20px;
     border-radius: 10px;
-    width: 80%;
+    width: 100%;
     max-width: 1000px;
     height: 80%;
     max-height: 90%;
@@ -64,7 +63,7 @@ redirect_from:
   });
 </script>
 
-[Download Resume - PDF Version](https://github.com/abarton51/abarton51.github.io/blob/master/_files/Barton_Austin_T_Resume-2.pdf?raw=true){:target="_blank"}
+<!-- [Download Resume - PDF Version](https://github.com/abarton51/abarton51.github.io/blob/master/_files/Barton_Austin_T_Resume-2.pdf?raw=true){:target="_blank"} -->
 
 {% include base_path %}
 
