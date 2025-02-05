@@ -2,8 +2,6 @@
 #
 # This config file is meant for settings that affect your entire site, values
 # which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
 locale                   : "en-US"
@@ -52,15 +50,12 @@ author:
   name             : "Austin Barton"
   avatar           : "headshot.png"  #"purg-pic.webp"
   bio              : "Undergraduate Math and CS @ GA Tech"
-  location         : "Atlanta, GA"
+  location         : # "Atlanta, GA"
   employer         :
-  pubmed           : #"https://www.arxiv.org"
   googlescholar    : #"https://scholar.google.com/"
   email            : "abarton40@gatech.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              :
   bitbucket        :
-  foursquare       :
   github           : "abarton51"
   keybase          :
   instagram        :
@@ -68,7 +63,6 @@ author:
   orcid            : # "http://orcid.org/yourorcidurl"
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
-  tumblr           :
   twitter          : # "replacethistwitterhandle"
   youtube          :
   wikipedia        :
@@ -141,11 +135,7 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
-
-
+  
 # Defaults
 defaults:
   # _posts
@@ -193,14 +183,6 @@ defaults:
       author_profile: true
       share: true
       comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
 
 # Sass/SCSS
 sass:
@@ -212,7 +194,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/New_York # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
