@@ -27,7 +27,7 @@ In my free time I like to train crossfit, BJJ, climbing, and Muay Thai. I love t
 ![](../images/me_collage-1.png)
 _Touching grass_
 
-## **:us: Before College**
+## **:us: Marines**
 
 I served 4 years as active duty enlisted in the U.S. Marine Corps as an Infantry Assaultman (MOS 0351). I entered as a Private (E-1) and was honorably discharged as a Sergeant (E-5).
 
