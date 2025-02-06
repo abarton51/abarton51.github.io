@@ -32,5 +32,5 @@ _Touching grass_
 I served 4 years as active duty enlisted in the U.S. Marine Corps as an Infantry Assaultman (MOS 0351). I entered as a Private (E-1) and was honorably discharged as a Sergeant (E-5).
 
 ![](../images/djibouti_cropped.png)
-_Djibouti, Africa, 2/6 Marines_
+_Djibouti, Africa, F 2/6 Marines_
 
