@@ -7,12 +7,12 @@ redirect_from:
   - /readings
 ---
 
+This page serves as both a personal reading journal and a resource for others seeking book recommendations. Hope you enjoy!
+
 ## Currently Reading
 - _The Wager_ by David Grann
 
 ## Favorites
-
-### Favorites
 
 - _The Brothers Karamazov_ by Fyodor Dostoevsky
 - _Crime and Punishment_ by Fyodor Dostoevsky
@@ -21,12 +21,6 @@ redirect_from:
 - _The Emerald Mile_ by Kevin Fedarko
 - _Do No Harm_ by Henry Marsh
 - _A Farewell to Arms_ by Ernst Hemingway
-
-## Reading Philosophy
-
-Reading offers a unique form of engagement that differs significantly from other media. While I appreciate various forms of content consumption, books provide a depth of experience that's hard to replicate. 
-
-This page serves as both a personal reading journal and a resource for others seeking book recommendations. Hope you enjoy!
 
 ## Book Reviews
 
@@ -84,6 +78,10 @@ All books here I have extensive experience using, but obviously such books are n
 ## Future Reading List
 1. _Boys in the Boat_ by Daniel James Brown
 2. _Don Quixote_ by Miguel Cervantes
+
+## Reading Philosophy
+
+Reading offers a unique form of engagement that differs significantly from other media. While I appreciate various forms of content consumption, books provide a depth of experience that's hard to replicate.
 
 _Last updated: February 2024_
 
