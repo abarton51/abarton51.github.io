@@ -35,6 +35,7 @@ Books are rated within their respective genre. You can't compare _Paradise Lost_
 [Rating System](#rating-system)
 
 ### Literature & Philosophy
+
 | Book | Author | Rating | Genre |
 |------|---------|---------|--------|
 | _The Brothers Karamazov_ | Fyodor Dostoevsky | 9.9 | Literature |
@@ -49,6 +50,7 @@ Books are rated within their respective genre. You can't compare _Paradise Lost_
 | _The Myth of Sisyphus_ | Albert Camus | 8.0 | Philosophy |
 
 ### Non-Fiction & Memoirs
+
 | Book | Author | Rating | Genre |
 |------|---------|---------|--------|
 | _The Emerald Mile_ | Kevin Fedarko | 9.0 | Adventure |
