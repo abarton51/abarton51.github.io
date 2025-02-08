@@ -16,7 +16,7 @@ I am an undergraduate student veteran :mortar_board: at the Georgia Institute of
 
 I am graduating in May of 2025 and expect to be pursuing a Master's of Science in Cybersecurity (or related field) starting the Fall of 2025. I have a strong background in mathematics, statistics, and data science, and am hoping to transition my studies and skills towards cybsecurity related endeavors. 
 
-I am interested in in researching applications and theory at the intersection of data science, IT, and cybersecurity. Some specific interests I have are vulnerability analysis and detection, adversarial machine learning, and anomaly detection.
+I am interested in researching applications and theory at the intersection of data science, IT, and cybersecurity. Some specific interests I have are vulnerability analysis and detection, adversarial machine learning, and anomaly detection.
 
 (_Currently finalizing graduate school commitments for Fall 2025 in Cybersecurity/Computing. Open to research and collaboration opportunities._)
 
