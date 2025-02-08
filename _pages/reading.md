@@ -37,7 +37,7 @@ Books are rated within their respective genre. You can't compare _The Brothers K
 | _The Brothers Karamazov_ | Fyodor Dostoevsky | 9.9 | Literature |
 | _Crime and Punishment_ | Fyodor Dostoevsky | 9.5 | Literature |
 | _Confessions_ | Augustine | 9.0 | Religion/Philosophy |
-| _Notes from the Underground_ | Fyodor Dostoevsky | 8.6 | Philosophy |
+| _Notes from Underground_ | Fyodor Dostoevsky | 8.6 | Philosophy |
 | _Paradise Lost_ | John Milton | 8.5 | Epic/Poetry |
 | _Slaughterhouse Five_ | Kurt Vonnegut | 9.5 | Literature |
 | _Frankenstein_ | Mary Shelley | 9.0 | Literature |
