@@ -10,11 +10,13 @@ redirect_from:
 This page serves as both a personal reading journal and a resource for others seeking book recommendations. Hope you enjoy!
 
 ## Currently Reading
-- _The Wager_ by David Grann
+
+- _Boys in the Boat_ by Daniel James Brown
 
 ## Favorites
 
 - _The Brothers Karamazov_ by Fyodor Dostoevsky
+- _The Wager_ by David Grann
 - _Crime and Punishment_ by Fyodor Dostoevsky
 - _Slaughterhouse Five_ by Kurt Vonnegut
 - _Frankenstein_ by Mary Shelly
@@ -24,7 +26,7 @@ This page serves as both a personal reading journal and a resource for others se
 
 ## Book Reviews
 
-Books are rated within their respective genre. You can't compare _Paradise Lost_ to _The Emerald Mile_, for example.
+Books are rated within their respective genre. You can't compare _The Brothers Karamazov_ to _The Wager_.
 
 [Rating System](#rating-system)
 
@@ -34,12 +36,13 @@ Books are rated within their respective genre. You can't compare _Paradise Lost_
 |------|---------|---------|--------|
 | _The Brothers Karamazov_ | Fyodor Dostoevsky | 9.9 | Literature |
 | _Crime and Punishment_ | Fyodor Dostoevsky | 9.5 | Literature |
-| _Notes from Underground_ | Fyodor Dostoevsky | 8.7 | Philosophy |
-| _Paradise Lost_ | John Milton | 8.5 | Poetry |
+| _Confessions_ | Augustine | 9.0 | Religion/Philosophy |
+| _Notes from the Underground_ | Fyodor Dostoevsky | 8.6 | Philosophy |
+| _Paradise Lost_ | John Milton | 8.5 | Epic/Poetry |
 | _Slaughterhouse Five_ | Kurt Vonnegut | 9.5 | Literature |
 | _Frankenstein_ | Mary Shelley | 9.0 | Literature |
 | _The Old Man and the Sea_ | Ernest Hemingway | 8.5 | Literature |
-| _A Farewell to Arms_ | Ernest Hemingway | 8.9 | Literature |
+| _A Farewell to Arms_ | Ernest Hemingway | 8.7 | Literature |
 | _A Tale of Two Cities_ | Charles Dickens | 8.2 | Literature |
 | _The Myth of Sisyphus_ | Albert Camus | 8.0 | Philosophy |
 
@@ -47,7 +50,8 @@ Books are rated within their respective genre. You can't compare _Paradise Lost_
 
 | Book | Author | Rating | Genre |
 |------|---------|---------|--------|
-| _The Emerald Mile_ | Kevin Fedarko | 9.0 | Adventure |
+| _The Wager_ | David Grann | 9.5 | Historical/Adventure |
+| _The Emerald Mile_ | Kevin Fedarko | 8.9 | Adventure/Historical |
 | _Do No Harm_ | Henry Marsh | 9.5 | Medicine |
 | _When Breath Becomes Air_ | Paul Kalanithi | 9.0 | Memoir |
 | _Being Mortal_ | Atul Gawande | 8.5 | Medicine |
@@ -59,15 +63,16 @@ All books here I have extensive experience using, but obviously such books are n
 
 | Book | Author | Rating | Field |
 |------|---------|---------|--------|
-| _Principles of Mathematical Analysis_ | Walter Rudin | 8.5 | Analysis |
+| _Principles of Mathematical Analysis_ | Walter Rudin | 8.5 | Real Analysis |
 | _Applied Combinatorics_ | Mitchel T. Keller, William T. Trotter | 8.0 | Combinatorics |
-| _Elements of Information Theory_ | Thomas M. Cover, Joy A. Thomas | 8.5 | Information Theory |
+| _Elements of Information Theory_ | Thomas M. Cover, Joy A. Thomas | 8.4 | Information Theory |
 | _Abstract Algebra and Its Applications_ | Various | 8.5 | Algebra |
-| _Deep Learning_ | Ian Goodfellow et al. | 9.0 | Deep Learning |
-| _Statistical Learning_ | Various | 9.0 | Statistics |
-| _Journey through Genius_ | William Dunham | 9.4 | Math History |
+| _Deep Learning_ | Ian Goodfellow et al. | 9.1 | Deep Learning |
+| _Statistical Learning_ | Various | 8.8 | Machine Learning |
+| _Journey through Genius_ | William Dunham | 9.0 | Math History |
 
 ## Rating System
+
 - **9.5-10**: Masterpiece, life-changing
 - **9.0-9.4**: Exceptional, highly recommended
 - **8.5-8.9**: Excellent, very enjoyable/worthwhile
@@ -76,8 +81,13 @@ All books here I have extensive experience using, but obviously such books are n
 - **Below 7**: Not listed
 
 ## Future Reading List
-1. _Boys in the Boat_ by Daniel James Brown
-2. _Don Quixote_ by Miguel Cervantes
+
+1. _Don Quixote_ by Miguel Cervantes
+2. _The Idiot_ by Fyodor Dostoevsky
+3. _The Emperor of All Maladies_ by Siddhartha Mukherjee
+4. _Baghavad Gita_ by Various
+5. _Moby Dick_ by Herman Melville
+6. _Man's Search for Meaning_ by Viktor Frankl
 
 ## Reading Philosophy
 
