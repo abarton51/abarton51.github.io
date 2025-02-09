@@ -20,13 +20,12 @@ This page serves as both a personal reading journal and a resource for others se
 - _Crime and Punishment_ by Fyodor Dostoevsky
 - _Slaughterhouse Five_ by Kurt Vonnegut
 - _Frankenstein_ by Mary Shelly
-- _The Emerald Mile_ by Kevin Fedarko
 - _Do No Harm_ by Henry Marsh
 - _A Farewell to Arms_ by Ernst Hemingway
 
 ## Book Reviews
 
-Books are rated within their respective genre. You can't compare _The Brothers Karamazov_ to _The Wager_.
+Books are rated within their respective genre.
 
 [Rating System](#rating-system)
 
@@ -37,7 +36,7 @@ Books are rated within their respective genre. You can't compare _The Brothers K
 | _The Brothers Karamazov_ | Fyodor Dostoevsky | 9.9 | Literature |
 | _Crime and Punishment_ | Fyodor Dostoevsky | 9.5 | Literature |
 | _Confessions_ | Augustine | 9.0 | Religion/Philosophy |
-| _Notes from the Underground_ | Fyodor Dostoevsky | 8.6 | Philosophy |
+| _Notes from Underground_ | Fyodor Dostoevsky | 8.6 | Philosophy |
 | _Paradise Lost_ | John Milton | 8.5 | Epic/Poetry |
 | _Slaughterhouse Five_ | Kurt Vonnegut | 9.5 | Literature |
 | _Frankenstein_ | Mary Shelley | 9.0 | Literature |
@@ -82,10 +81,10 @@ All books here I have extensive experience using, but obviously such books are n
 
 ## Future Reading List
 
-1. _Don Quixote_ by Miguel Cervantes
-2. _The Idiot_ by Fyodor Dostoevsky
-3. _The Emperor of All Maladies_ by Siddhartha Mukherjee
-4. _Baghavad Gita_ by Various
+1. _War and Peace_ by Leo Tolstoy
+2. _Don Quixote_ by Miguel Cervantes
+3. _The Idiot_ by Fyodor Dostoevsky
+4. _The Emperor of All Maladies_ by Siddhartha Mukherjee
 5. _Moby Dick_ by Herman Melville
 6. _Man's Search for Meaning_ by Viktor Frankl
 
