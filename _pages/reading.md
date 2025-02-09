@@ -55,6 +55,7 @@ Books are rated within their respective genre.
 | _When Breath Becomes Air_ | Paul Kalanithi | 9.0 | Memoir |
 | _Being Mortal_ | Atul Gawande | 8.5 | Medicine |
 | _Complications_ | Atul Gawande | 8.0 | Medicine |
+| _Journey through Genius_ | William Dunham | 9.0 | Math History |
 
 ### Technical & Mathematics
 
@@ -68,7 +69,6 @@ All books here I have extensive experience using, but obviously such books are n
 | _Abstract Algebra and Its Applications_ | Various | 8.5 | Algebra |
 | _Deep Learning_ | Ian Goodfellow et al. | 9.1 | Deep Learning |
 | _Statistical Learning_ | Various | 8.8 | Machine Learning |
-| _Journey through Genius_ | William Dunham | 9.0 | Math History |
 
 ## Rating System
 
