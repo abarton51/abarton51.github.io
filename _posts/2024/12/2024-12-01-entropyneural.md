@@ -1,7 +1,7 @@
 ---
 title: "Entropy and Information in Neural Spike Trains"
 excerpt: "An in-depth analysis of the quantification of information in neural spike trains based on entropy measures."
-permalink: /posts/2024/12/01/blog-post-3.md/
+permalink: /posts/2024/12/01/entropyneural.md/
 collection: portfolio
 ---
 
