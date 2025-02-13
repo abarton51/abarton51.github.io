@@ -46,13 +46,13 @@ First, let's take a look at the ownership rules. Keep these rules in mind as we 
 
 A *scope* is the range within a program for which an item is *valid*. Take the following variable:
 
-```
+```rust
 let s = "hello";
 ```
 
 The variable `s` refers to a string literal, where the value of the string is hardcoded into the text of the program. The variable is valid from the point at which it's declared until the end of the current *scope*.
 
-```
+```rust
 {                       // s is not valid here, it's not yet declared
     let s = "hello";    // s is valid from this point forward
 
@@ -72,7 +72,7 @@ At this point, the relationship between scopes and when variables are valid is s
 
 The `String` type manages data allocated on the heap and as such is able to store an amount of text that is unknown to us at compile time. You can create a `String` from a string literal using the `from` function, like so:
 
-```
+```rust
 let s = String::from("hello");
 ```
 
@@ -80,7 +80,7 @@ The double colon `::` operator allows us to namespace this particular `from` fun
 
 This kind of string can be mutated:
 
-```
+```rust
 let mut s = String::from("hello");
 s.push_str(", world!");
 println!("{s}");
@@ -101,7 +101,7 @@ In most languages without a GC, it's our responsibility to identify when memory 
 
 Rust takes a different path: the memory is automatically returned once the variable that owns it goes out of scope. Here's a version of our scope example using a `String`:
 
-```
+```rust
 {
     let s = String::from("hello");  // s is valid from this point forward
 

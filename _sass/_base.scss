@@ -152,6 +152,118 @@ td > code {
   }
 }
 
+div.highlight {
+  font-size: 1.0em !important;
+  margin: 0.4em 0;
+
+  pre.highlight {
+    padding: 0.0em;
+    line-height: 1.4;
+    font-size: 1.0em !important;
+    margin: 0;
+  }
+}
+
+.highlight > pre,
+.highlighter-rouge > pre,
+.highlight > code,
+.highlighter-rouge > code {
+  font-size: 0.9em !important;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Language-specific code blocks */
+.language-python,
+.language-r,
+.language-ruby,
+.language-javascript,
+.language-bash,
+.language-css,
+.language-html,
+.language-scss {
+  font-size: 0.8em !important;
+
+  pre.highlight {
+    margin: 0;
+    padding: 0.6em;
+  }
+}
+
+/* Rust-specific syntax highlighting */
+.language-rust {
+  font-size: 0.8em !important;
+
+  pre.highlight {
+    margin: 0;
+    padding: 0.6em;
+  }
+
+  .highlight {
+    /* Keywords and core syntax */
+    .k    { color: #a266cc; }           /* Keywords (let, fn, etc) - muted purple */
+    .kc   { color: #a266cc; }           /* Keyword.Constant */
+    .kd   { color: #a266cc; }           /* Keyword.Declaration */
+    .kn   { color: #a266cc; }           /* Keyword.Namespace */
+    .kp   { color: #a266cc; }           /* Keyword.Pseudo */
+    .kr   { color: #a266cc; }           /* Keyword.Reserved */
+    .kt   { color: #c77e2f; }           /* Keyword.Type - rust brown */
+
+    /* Names and identifiers */
+    .n    { color: #dcdcdc; }           /* Name - light gray */
+    .na   { color: #dcdcdc; }           /* Name.Attribute */
+    .nb   { color: #c77e2f; }           /* Name.Builtin - rust brown */
+    .nc   { color: #39a7bf; }           /* Name.Class (custom structs/enums) - sea blue */
+    .nf   { color: #39a7bf; }           /* Name.Function declaration - sea blue */
+    .nx   { color: #dcdcdc; }           /* Name.Other (function calls) - light gray */
+    .nn   { color: #c77e2f; }           /* Name.Namespace (built-in types) - rust brown */
+    .nt   { color: #39a7bf; }           /* Name.Tag */
+    
+    /* Additional Rust built-in types */
+    .bp   { color: #c77e2f; }           /* Name.Builtin.Pseudo (built-in types) - rust brown */
+    .built_in { color: #c77e2f; }       /* Additional class for built-in types - rust brown */
+    
+    /* Strings */
+    .s    { color: #799c60; }           /* String - muted green */
+    .s1   { color: #799c60; }           /* String.Single */
+    .s2   { color: #799c60; }           /* String.Double */
+    .sr   { color: #799c60; }           /* String.Regex (raw strings) */
+    .se   { color: #799c60; }           /* String.Escape */
+    
+    /* Comments */
+    .c    { color: #7a7373; font-style: italic; }  /* Comment - muted gray */
+    .cm   { color: #7a7373; font-style: italic; }  /* Comment.Multiline */
+    .cp   { color: #7a7373; font-style: italic; }  /* Comment.Preproc */
+    .c1   { color: #7a7373; font-style: italic; }  /* Comment.Single */
+    .cs   { color: #7a7373; font-style: italic; }  /* Comment.Special */
+    
+    /* Numbers */
+    .m    { color: #c77e2f; }           /* Number - rust brown */
+    .mf   { color: #c77e2f; }           /* Number.Float */
+    .mh   { color: #c77e2f; }           /* Number.Hex */
+    .mi   { color: #c77e2f; }           /* Number.Integer */
+    
+    /* Operators and Punctuation */
+    .o    { color: #dcdcdc; }           /* Operator - light gray */
+    .ow   { color: #a266cc; }           /* Operator.Word */
+    .p    { color: #dcdcdc; }           /* Punctuation - light gray */
+    
+    /* Rust-specific elements */
+    .self { color: #a266cc; }           /* self keyword - purple */
+    .lifetime { color: #c77e2f; }       /* lifetime annotations - rust brown */
+    .attribute { color: #7a7373; }      /* attributes (#[...]) - muted gray */
+    .macro { color: #c77e2f; }          /* macro invocations (println!) - rust brown */
+  }
+}
+
+.highlighter-rouge {
+  margin: 0.7em 0;
+
+  div.highlight {
+    margin: 0;
+  }
+}
+
 /* horizontal rule */
 
 hr {
