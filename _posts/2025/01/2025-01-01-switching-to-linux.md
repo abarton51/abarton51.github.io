@@ -1,7 +1,7 @@
 ---
 title: "Finally Switching to Linux"
 excerpt: A blog post about *my* thoughts and experiences jumping ship from Windows to Linux.
-permalink: /posts/2025/01/01/blog-post-5.md/
+permalink: /posts/2025/01/01/switching-to-linux.md/
 author: "Austin B."
 ---
 

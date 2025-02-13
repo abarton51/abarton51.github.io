@@ -1,0 +1,30 @@
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+/* Custom code block styling */
+div.highlighter-rouge {
+  margin: 2em 0;
+  
+  pre.highlight {
+    padding: 1em;
+    font-size: 0.8em;
+    line-height: 1.8;
+    border-radius: 4px;
+    background: #252a34;
+  }
+}
+
+/* Inline code */
+code.highlighter-rouge {
+  padding: 0.2em 0.4em;
+  font-size: 0.85em;
+  border-radius: 3px;
+  background: rgba(27, 31, 35, 0.05);
+  color: #ff5277;
+}
+
+/* Code block with line numbers */
+.highlight table td.gutter {
+  padding-right: 1em;
+  color: #666;
+}
