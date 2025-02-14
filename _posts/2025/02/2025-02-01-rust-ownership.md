@@ -11,7 +11,7 @@ I am *not* an expert in Rust. In fact, I have just recently taken up the endeavo
 
 This page serves as a summary of what I learned from that book on _ownership_ in Rust as well as some other helpful resources for clarification and/or review.
 
-Cheers.
+Enjoy :crab:
 
 ---
 
@@ -88,7 +88,7 @@ println!("{s}");
 
 ### Memory and Allocation
 
-With the `String` type, in order to support a mutable, growable piece of text, we need to allocate an amount of memory on the heap, unkown at compile time, to hold the contents. This means:
+With the `String` type, in order to support a mutable, growable piece of text, we need to allocate an amount of memory on the _heap_, unkown at compile time, to hold the contents. This means:
 
 - The memory must be requested from the memory allocator at runtime.
 - We need a way of returning this memory to the allocator when we're done with our `String`.
@@ -97,7 +97,7 @@ That first part is done by us: when we call `String::from`, its implementation r
 
 In languages with a *garbage collector* (GC), the GC keeps track of and cleans up memory that isn't being used anymore, and we don't need to think about it.
 
-In most languages without a GC, it's our responsibility to identify when memory is no longer being used and to call code to explicitly free it, just as we did to request it. Doing this correctly has historically been a difficult programming problem. If we forget, we'll waste memory. If we do it too early, we'll have an invalid variable. If we do it twice, that's a bug too. We need to pair exactly one `allocate` with exactly one `free`.
+In most languages without a GC, it's our responsibility to identify when memory is no longer being used and to call code to explicitly free it, just as we did to request it. Doing this correctly has historically been a difficult programming problem. If we forget, we'll waste memory. If we do it too early, we'll have an invalid variable (such as a _dangling reference_). If we do it twice, that's a bug too. We need to pair exactly one `allocate` with exactly one `free`.
 
 Rust takes a different path: the memory is automatically returned once the variable that owns it goes out of scope. Here's a version of our scope example using a `String`:
 
