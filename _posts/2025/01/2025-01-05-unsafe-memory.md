@@ -1,7 +1,7 @@
 ---
 title: "Unsafe Memory"
-excerpt: Overview of concepts of unsafe.
-permalink: /posts/2025/01/01/switching-to-linux.md/
+excerpt: Overview of concepts involving memory management and bugs due to unsafe memory.
+permalink: /posts/2025/01/01/unsafe-memory.md/
 author: "Austin B."
 ---
 
