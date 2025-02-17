@@ -1,6 +1,6 @@
 ---
-title: "Lifetimes in Rust"
-excerpt: Explaining how lifetimes in Rust work.
+title: "Rust: Validating References with Lifetimes"
+excerpt: Explaining how to validate references with lifetimes in Rust.
 permalink: /posts/2025/02/014/lifetimes.md/
 author: "Austin B."
 ---
@@ -9,7 +9,7 @@ author: "Austin B."
 
 I am *not* an expert in Rust. In fact, I have just recently taken up the endeavor or learning Rust. I am currently finishing my first end-end read of the _The Rust Programming Language_ by Steve Klabnik and Carol Nichols. This book is **fantastic** and I highly recommend it for learning.
 
-This page serves as a summary and my own reference of what I learned about _generic lifetimes_ in Rust as well as some other helpful resources for clarification and/or review.
+This page serves as a summary and my own reference of what I learned about _generic lifetimes_ in Rust as well as some other helpful resources for clarification and/or review. Much of the information here is taken directly from _The Rust Programming Language_, but I have modified some sections to expand on various concepts, explain it differently, or omit certain information for the sake of brevity.
 
 Enjoy :crab:
 
@@ -21,19 +21,19 @@ Enjoy :crab:
 
 # Lifetimes
 
-**Lifetimes** are how the compiler keeps track of how long references are valid. Every reference in Rust has a lifetime, even if it's not explicitly written.
+**Lifetimes** are how the compiler keeps track of how long references are valid. _Every reference in Rust has a lifetime, even if it's not explicitly written._
 
-Lifetimes ensure that a reference is never used after the value it points to has been dropped (gone out of scope). This prevents dangling references.
+Lifetimes ensure that a reference is never used after the value it points to has been dropped (gone out of scope). This prevents _dangling references_.
 
 # Validating References with Lifetimes
 
-Lifetimes are a kind of _generic_ type. But instead of ensuring that type has a certain kind of behavior, lifetimes ensure that references are valid as long as we need them to be.
+Lifetimes are a kind of _generic_ type in Rust. But instead of ensuring that type has a certain kind of behavior, lifetimes ensure that references are valid as long as we need them to be.
 
 **Every reference in Rust has a *lifetime***.
 
 The **lifetime** is the scope for which that reference is valid.
 
-Most of the time, lifetimes are implicit inferred, just like most of the time types are inferred. We must annotate types only when multiple types are possible. In a similar way, we must annotate lifetimes when the lifetimes of references could be related in a few different ways.
+Most of the time, lifetimes are implicitly inferred, just like most of the time types are inferred. We must annotate types only when multiple types are possible. In a similar way, we must annotate lifetimes when the lifetimes of references could be related in a few different ways.
 
 ## Preventing Dangling References
 
@@ -243,4 +243,112 @@ fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
     }
 }
 ```
+
+The function signature tells Rust (the compiler and more specifically, the *borrow checker*) that for some lifetime `'a`, the function takes two paramters, both of which are string slices that live at least as long as lifetime `'a`.
+
+The function signature also tells Rust that the string slice returned from the function will live at least as long as lifetime `'a`.
+
+In practice, it means that the lifetime of the reference returned by the `longest` function is the same as the smaller of the lifetimes of the values referred to by the function arguments. These relationships are what we want Rust to use when analyzing this code.
+
+Remember, when we specify the lifetime parameters in this function signature, we are **not changing** the lifetimes of any values passed or returned. Rather, we're specifying that the *borrow checker* should reject any values that don't adhere to these constraints.
+
+Note that the `longest` function doesn't need to know exactly how long `x` and `y` will live, only that some of the scope can be substituted for `'a` that will satisfy this signature.
+
+When annotating lifetimes in functions, the annotations go in the function signature, not in the function body. The lifetime annotations become part of the contract of the function, much like the types in the signature. Having function signatures contain the lifetime contract means the analysis the Rust compiler can be simpler.
+
+When we pass concrete references to `longest`, the concrete lifetime that is substituted for `'a` is the part of the scope of `x` that overlaps with the scope of `y`. In other words, the generic lifetime `a` will get the concrete lifetime that is equal to the smaller of the lifetimes of `x` and `y`.
+
+Here are some examples using references with various concrete lifetimes to understand lifetime annotations and how they restrict the `longest` function.
+
+```rust
+fn main() {
+    let string1 = String::from("long string is long");
+    {
+        let string2 = String::from("xyz");
+        let result = longest(string1.as_str(), string2.as_str());
+        println!("The longest string is {result}");
+    }
+}
+```
+
+- `string1` is valid until the end of the outer scope.
+- `string2` is valid until the end of the inner scope.
+- `result` references something that is valid until the end of the inner scope.
+
+The borrow checker approves of this code, it compiles, and runs successfully.
+
+```rust
+fn main() {
+    let string1 = String::from("long string is long");
+    let result;
+    {
+        let string2 = String::from("xyz");
+        result = longest(string1.as_str(), string2.as_str());
+    }
+    println!("The longest string is {result}");
+}
+```
+
+When we compile this code however, we get a compile-time error that states: `'string2' does not live long enough`
+
+The error shows that for `result` to be valid for the `println!` statement, `string2` would also need to be valid until then. This is because Rust we annotated the lifetimes of the function parameters and return values using the same lifetime parameter `'a`.
+
+`result` could be a reference to `string1` which is valid until the end of the outer scope or a reference to `string2` which is valid until the end of the inner scope. We've told the compile though that the lifetme of the reference returned by `longest` is the same of the smaller of the lifetimes of the references passed in.
+
+In this case `result` stores a reference to `string1`, but that isn't determined at compile time. The compiler only knows what we've told it through lifetime annotations. So it essentially assumes that result is a reference with a lifetime that lasts until the end of the inner scope.
+
+## Thinking in Terms of Lifetimes
+
+If instead, we always returned the first argument, we would have the function signature defined as
+
+```rust
+fn longest<'a>(x: &'a str, y: &str) -> &'a str {
+    x
+}
+```
+
+This is because we specify lifetime parameters based on what our function is doing. Since the value returned as no relationship to the argument `y`, we have no need specifying a relationship between the lifetimes of the value returned and `y`.
+
+When returning a reference from a function, the lifetime parameter for the return type needs to match the lifetime parameter for one of the parameters.
+
+If the reference returned does *not* refer to one of the parameters, it must refer to a value created within this function. *However*, this would be a *dangling reference* because the value will go out of scope at the end of the function.
+
+Consider,
+
+```rust
+fn longest<'a>(x: &str, y: &str) -> &'a str {
+    let result = String::from("really long string");
+    result.as_str()
+}
+```
+
+Here, even though we've specified a lifetime parameter `'a` for the return type, this implementation will fail to compile because the return value lifetime is not related to the lifetime of the parameters at all. Here is the error message:
+
+```
+$ cargo run
+   Compiling chapter10 v0.1.0 (file:///projects/chapter10)
+error[E0515]: cannot return value referencing local variable `result`
+  --> src/main.rs:11:5
+   |
+11 |     result.as_str()
+   |     ------^^^^^^^^^
+   |     |
+   |     returns a value referencing data owned by the current function
+   |     `result` is borrowed here
+
+For more information about this error, try `rustc --explain E0515`.
+error: could not compile `chapter10` (bin "chapter10") due to 1 previous error
+```
+
+The problem is that `result` goes of out scope and gets cleaned up at the end of the function. So we are returning a reference to a value that doesn't exist after the function returns!
+
+    Remember: local variables in functions are stored on the stack. When the function returns, the stack is cleaned up.
+
+There is no way we can specify lifetime parameters that would change the dangling reference, and Rust won't let us create a dangling reference.
+
+In this case, the best fix would be to return an owned data type rather than a reference so the calling function is then responsible for cleaning up the value.
+
+## Lifetime Annotations in Struct Definitions
+
+
 
