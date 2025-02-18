@@ -174,9 +174,6 @@ div.highlight {
 }
 
 /* Language-specific code blocks */
-.language-python,
-.language-r,
-.language-ruby,
 .language-javascript,
 .language-bash,
 .language-css,
@@ -187,6 +184,75 @@ div.highlight {
   pre.highlight {
     margin: 0;
     padding: 0.6em;
+  }
+}
+
+.highlighter-rouge {
+  margin: 0.7em 0;
+
+  div.highlight {
+    margin: 0;
+  }
+}
+
+/* C-specific syntax highlighting */
+.language-c, .language-cpp, .language-python {
+  font-size: 0.8em !important;
+
+  pre.highlight {
+    margin: 0;
+    padding: 0.6em;
+  }
+
+  .highlight {
+    /* Keywords and core syntax */
+    .k    { color: #569cd6; }           /* Keywords (if, for, while, etc) - light blue */
+    .kc   { color: #569cd6; }           /* Keyword.Constant (const) */
+    .kd   { color: #569cd6; }           /* Keyword.Declaration (int, char, etc) */
+    .kn   { color: #569cd6; }           /* Keyword.Namespace */
+    .kp   { color: #569cd6; }           /* Keyword.Pseudo */
+    .kr   { color: #569cd6; }           /* Keyword.Reserved */
+    .kt   { color: #4ec9b0; }           /* Keyword.Type (int, char, etc) - light teal */
+
+    /* Names and identifiers */
+    .n    { color: #d4d4d4; }           /* Name - light gray */
+    .na   { color: #d4d4d4; }           /* Name.Attribute */
+    .nb   { color: #569cd6; }           /* Name.Builtin (printf, scanf) */
+    .nc   { color: #4ec9b0; }           /* Name.Class (struct names) - light teal */
+    .nf   { color: #dcdcaa; }           /* Name.Function - light yellow */
+    .nx   { color: #d4d4d4; }           /* Name.Other */
+    .nt   { color: #569cd6; }           /* Name.Tag */
+    
+    /* Preprocessor directives */
+    .cp   { color: #db8f8f; }           /* Comment.Preproc (#include, #define) - light red */
+    .cpf  { color: #db8f8f; }           /* Comment.PreprocFile */
+    
+    /* Strings */
+    .s    { color: #ce9178; }           /* String - light orange */
+    .s1   { color: #ce9178; }           /* String.Single */
+    .s2   { color: #ce9178; }           /* String.Double */
+    .se   { color: #ce9178; }           /* String.Escape */
+    
+    /* Comments */
+    .c    { color: #6a9955; font-style: italic; }  /* Comment - light green */
+    .cm   { color: #6a9955; font-style: italic; }  /* Comment.Multiline */
+    .c1   { color: #6a9955; font-style: italic; }  /* Comment.Single */
+    .cs   { color: #6a9955; font-style: italic; }  /* Comment.Special */
+    
+    /* Numbers */
+    .m    { color: #b5cea8; }           /* Number - light sage */
+    .mf   { color: #b5cea8; }           /* Number.Float */
+    .mh   { color: #b5cea8; }           /* Number.Hex */
+    .mi   { color: #b5cea8; }           /* Number.Integer */
+    
+    /* Operators and Punctuation */
+    .o    { color: #d4d4d4; }           /* Operator - light gray */
+    .ow   { color: #569cd6; }           /* Operator.Word */
+    .p    { color: #d4d4d4; }           /* Punctuation - light gray */
+
+    /* Macros and includes */
+    .macro { color: #db8f8f; }          /* Macro definitions - light red */
+    .inc   { color: #db8f8f; }          /* Include statements - light red */
   }
 }
 
@@ -201,23 +267,24 @@ div.highlight {
 
   .highlight {
     /* Keywords and core syntax */
-    .k    { color: #a266cc; }           /* Keywords (let, fn, etc) - muted purple */
-    .kc   { color: #a266cc; }           /* Keyword.Constant */
-    .kd   { color: #a266cc; }           /* Keyword.Declaration */
-    .kn   { color: #a266cc; }           /* Keyword.Namespace */
-    .kp   { color: #a266cc; }           /* Keyword.Pseudo */
-    .kr   { color: #a266cc; }           /* Keyword.Reserved */
+    .k    { color: #d484ce; }           /* Keywords (let, fn, etc) - muted purple */
+    .kc   { color: #d484ce; }           /* Keyword.Constant */
+    .kd   { color: #d484ce; }           /* Keyword.Declaration */
+    .kn   { color: #d484ce; }           /* Keyword.Namespace */
+    .kp   { color: #d484ce; }           /* Keyword.Pseudo */
+    .kr   { color: #d484ce; }           /* Keyword.Reserved */
     .kt   { color: #c77e2f; }           /* Keyword.Type - rust brown */
 
     /* Names and identifiers */
     .n    { color: #dcdcdc; }           /* Name - light gray */
     .na   { color: #dcdcdc; }           /* Name.Attribute */
     .nb   { color: #c77e2f; }           /* Name.Builtin - rust brown */
-    .nc   { color: #39a7bf; }           /* Name.Class (custom structs/enums) - sea blue */
-    .nf   { color: #39a7bf; }           /* Name.Function declaration - sea blue */
+    .nc   { color: #80cfca; }           /* Name.Class (custom structs/enums) - sea blue */
+    .nf   { color: #80cfca; }           /* Name.Function declaration - sea blue */
     .nx   { color: #dcdcdc; }           /* Name.Other (function calls) - light gray */
     .nn   { color: #c77e2f; }           /* Name.Namespace (built-in types) - rust brown */
-    .nt   { color: #39a7bf; }           /* Name.Tag */
+    .nt   { color: #80cfca; }           /* Name.Tag */
+    .nd   { color: #c77e2f; }           /* Name.Decorator (macros in Rust) - rust brown */
     
     /* Additional Rust built-in types */
     .bp   { color: #c77e2f; }           /* Name.Builtin.Pseudo (built-in types) - rust brown */
@@ -245,22 +312,14 @@ div.highlight {
     
     /* Operators and Punctuation */
     .o    { color: #dcdcdc; }           /* Operator - light gray */
-    .ow   { color: #a266cc; }           /* Operator.Word */
+    .ow   { color: #d484ce; }           /* Operator.Word */
     .p    { color: #dcdcdc; }           /* Punctuation - light gray */
     
     /* Rust-specific elements */
-    .self { color: #a266cc; }           /* self keyword - purple */
+    .self { color: #d484ce; }           /* self keyword - purple */
     .lifetime { color: #c77e2f; }       /* lifetime annotations - rust brown */
     .attribute { color: #7a7373; }      /* attributes (#[...]) - muted gray */
     .macro { color: #c77e2f; }          /* macro invocations (println!) - rust brown */
-  }
-}
-
-.highlighter-rouge {
-  margin: 0.7em 0;
-
-  div.highlight {
-    margin: 0;
   }
 }
 
