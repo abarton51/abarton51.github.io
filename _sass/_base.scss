@@ -279,11 +279,11 @@ div.highlight {
     .n    { color: #dcdcdc; }           /* Name - light gray */
     .na   { color: #dcdcdc; }           /* Name.Attribute */
     .nb   { color: #c77e2f; }           /* Name.Builtin - rust brown */
-    .nc   { color: #80cfca; }           /* Name.Class (custom structs/enums) - sea blue */
-    .nf   { color: #80cfca; }           /* Name.Function declaration - sea blue */
+    .nc   { color: #78c1bc; }           /* Name.Class (custom structs/enums) - sea blue */
+    .nf   { color: #78c1bc; }           /* Name.Function declaration - sea blue */
     .nx   { color: #dcdcdc; }           /* Name.Other (function calls) - light gray */
     .nn   { color: #c77e2f; }           /* Name.Namespace (built-in types) - rust brown */
-    .nt   { color: #80cfca; }           /* Name.Tag */
+    .nt   { color: #78c1bc; }           /* Name.Tag */
     .nd   { color: #c77e2f; }           /* Name.Decorator (macros in Rust) - rust brown */
     
     /* Additional Rust built-in types */
@@ -291,11 +291,11 @@ div.highlight {
     .built_in { color: #c77e2f; }       /* Additional class for built-in types - rust brown */
     
     /* Strings */
-    .s    { color: #799c60; }           /* String - muted green */
-    .s1   { color: #799c60; }           /* String.Single */
-    .s2   { color: #799c60; }           /* String.Double */
-    .sr   { color: #799c60; }           /* String.Regex (raw strings) */
-    .se   { color: #799c60; }           /* String.Escape */
+    .s    { color: #89af6e; }           /* String - muted green */
+    .s1   { color: #89af6e; }           /* String.Single */
+    .s2   { color: #89af6e; }           /* String.Double */
+    .sr   { color: #89af6e; }           /* String.Regex (raw strings) */
+    .se   { color: #89af6e; }           /* String.Escape */
     
     /* Comments */
     .c    { color: #7a7373; font-style: italic; }  /* Comment - muted gray */
@@ -320,6 +320,9 @@ div.highlight {
     .lifetime { color: #c77e2f; }       /* lifetime annotations - rust brown */
     .attribute { color: #7a7373; }      /* attributes (#[...]) - muted gray */
     .macro { color: #c77e2f; }          /* macro invocations (println!) - rust brown */
+    
+    /* Exhaustive lifetime-related classes */
+    .nv   { color: #dcdcdc; }           /* Name.Variable - lifetime */
   }
 }
 
