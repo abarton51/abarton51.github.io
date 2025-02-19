@@ -7,7 +7,7 @@ author: "Austin B."
 
 # Preface
 
-I am *not* an expert in Rust. In fact, I have just recently taken up the endeavor or learning Rust. I am currently finishing my first end-end read of the _The Rust Programming Language_ by Steve Klabnik and Carol Nichols. This book is **fantastic** and I highly recommend it for learning.
+I am *not* an expert in Rust. In fact, I have just recently taken up the endeavor of learning Rust. I am currently finishing my first end-end read of the _The Rust Programming Language_ by Steve Klabnik and Carol Nichols. This book is **fantastic** and I highly recommend it for learning. In addition to this reading, I am using Rust as my language of choice for a numerical analysis course as well as a small TCP chat application I'm working on in my free time.
 
 This page serves as a summary and my own reference of what I learned about _generic lifetimes_ in Rust as well as some other helpful resources for clarification and/or review. Much of the information here is taken directly from _The Rust Programming Language_, but I have modified some sections to expand on various concepts, explain it differently, or omit certain information for the sake of brevity.
 
