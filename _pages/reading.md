@@ -103,12 +103,15 @@ These are simply the books I've used/read which I think are worthwhile.
 
 ## Want to Read
 
+Give me some recommendations. These are books that stick out to me that I intend on reading someday.
+
 ### Literature
 
 1. _War and Peace_ by Leo Tolstoy
 2. _Don Quixote_ by Miguel Cervantes
 3. _The Idiot_ by Fyodor Dostoevsky
 4. _Moby Dick_ by Herman Melville
+5. _1984_ by George Orwell
 
 ### Philosophy
 
@@ -120,6 +123,7 @@ These are simply the books I've used/read which I think are worthwhile.
 
 1. _The Emperor of All Maladies_ by Siddhartha Mukherjee
 2. _A Short History of Nearly Everything_ by Bill Bryson
+3. _The Age of Surveillance Capitalism_ Shoshana Zuboff
 
 ### Fantasy
 
