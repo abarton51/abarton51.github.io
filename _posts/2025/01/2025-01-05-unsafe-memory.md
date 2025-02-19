@@ -77,8 +77,8 @@ int x = *ptr;           // Undefined behavior: ptr is now a dangling pointer
 ```
 
 #### **Consequences**:
-- **Undefined behavior**: Accessing a dangling pointer can cause crashes or corrupt memory.
-- **Security vulnerabilities**: Attackers can exploit dangling pointers to access sensitive data or execute arbitrary code.
+- **Undefined behavior**: Accessing a dangling pointer can cause crashes or corrupt memory. The fact is we don't know what it will do, but the memory location it's pointing to has data that isn't guaranteed to exit.
+- **Security vulnerabilities**: Attackers can exploit dangling pointers to access sensitive data or execute arbitrary code. This is called *buffer overflow* and we will go over this in more detail later.
 
 ---
 

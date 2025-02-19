@@ -7,7 +7,7 @@ author: "Austin B."
 
 # Preface
 
-I am *not* an expert in Rust. In fact, I have just recently taken up the endeavor or learning Rust. I am currently finishing my first end-end read of the _The Rust Programming Language_ by Steve Klabnik and Carol Nichols. This book is **fantastic** and I highly recommend it for learning.
+I am *not* an expert in Rust. In fact, I have just recently taken up the endeavor of learning Rust. I am currently finishing my first end-end read of the _The Rust Programming Language_ by Steve Klabnik and Carol Nichols. This book is **fantastic** and I highly recommend it for learning. In addition to this reading, I am using Rust as my language of choice for a numerical analysis course as well as a small TCP chat application I'm working on in my free time.
 
 This page serves as a summary of what I learned from that book on _ownership_ in Rust as well as some other helpful resources for clarification and/or review.
 
