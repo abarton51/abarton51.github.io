@@ -30,7 +30,7 @@ This page serves as both a personal reading journal and a resource for others se
 
 ## Book Reviews
 
-Books are rated within their respective genre.
+Books are rated within their respective genre. Books I personally don't like or that are rated < 7 are not included.
 
 [Rating System](#rating-system)
 
@@ -53,21 +53,22 @@ Books are rated within their respective genre.
 
 | Book | Author | Rating | Sub-Genres |
 |------|---------|------|---------|
-| _The Myth of Sisyphus_ | Albert Camus | 9.0 | Absurdism |
+| _The Myth of Sisyphus_ | Albert Camus | 8.9 | Absurdism |
 | _Confessions_ | Augustine | 9.0 | Christianity, Autobiography, Theology |
-| _On the Consolation of Philosophy_ | Boethius | 8.8 | Neoplatonism, Memoir, Christian Theology |
+| _On the Consolation of Philosophy_ | Boethius | 8.6 | Neoplatonism, Memoir, Christian Theology |
+| _Meditations_ | Marcus Aurelius | 8.9 | Stoicism |
 
 ### Non-Fiction & Memoirs
 
 | Book | Author | Rating | Sub-Genres |
 |------|---------|---------|--------|
-| _The Wager_ | David Grann | 9.5 | Historical, Adventure |
-| _The Emerald Mile_ | Kevin Fedarko | 8.9 | Adventure, Historical |
-| _Do No Harm_ | Henry Marsh | 9.5 | Medicine |
+| _The Wager_ | David Grann | 9.4 | Historical, Adventure |
+| _The Emerald Mile_ | Kevin Fedarko | 8.5 | Adventure, Historical |
+| _Do No Harm_ | Henry Marsh | 9.1 | Medicine |
 | _When Breath Becomes Air_ | Paul Kalanithi | 9.0 | Memoir, Medicine |
 | _Being Mortal_ | Atul Gawande | 8.5 | Medicine |
 | _Complications_ | Atul Gawande | 8.0 | Medicine |
-| _Journey through Genius_ | William Dunham | 8.4 | Math History |
+| _Journey through Genius_ | William Dunham | 7.5 | Math History |
 
 ### Technical & Mathematics
 
@@ -86,7 +87,7 @@ These are simply the books I've used/read which I think are worthwhile.
 | _Abstract Algebra and Its Applications_ | Various | Algebra |
 | _Deep Learning_ | Ian Goodfellow et al. | Deep Learning |
 | _An Introduction to Statistical Learning_ | James, Witten, Hastie, Tibshirani, Taylor | Machine Learning |
-| _Probability: An Introduction | Geoffrey Grimmett, Dominic Welsh | Probability |
+| _Probability: An Introduction_ | Geoffrey Grimmett, Dominic Welsh | Probability |
 | _Applied Combinatorics_ | Mitchel T. Keller, William T. Trotter | Combinatorics |
 
 ## Rating System
@@ -108,11 +109,17 @@ These are simply the books I've used/read which I think are worthwhile.
 2. _Don Quixote_ by Miguel Cervantes
 3. _The Idiot_ by Fyodor Dostoevsky
 4. _Moby Dick_ by Herman Melville
-5. _Man's Search for Meaning_ by Viktor Frankl
+
+### Philosophy
+
+1. _Man's Search for Meaning_ by Viktor Frankl
+2. _Thus Spoke Zarathustra_ by Friedrich Nietzsche
+3. _The Stranger_ by Albert Camus
 
 ### Non-Fiction
 
 1. _The Emperor of All Maladies_ by Siddhartha Mukherjee
+2. _A Short History of Nearly Everything_ by Bill Bryson
 
 ### Fantasy
 
