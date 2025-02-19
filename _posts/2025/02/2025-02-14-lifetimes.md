@@ -23,7 +23,7 @@ Enjoy :crab:
 
 **Recommended Pre-requisites:**
 
-- [Rust: Ownership](/posts/2025/02/01/ownership/)
+- [Rust: Ownership](/posts/2025/02/01/rust-ownership.md/)
 
 ---
 
