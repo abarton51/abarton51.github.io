@@ -71,18 +71,23 @@ Books are rated within their respective genre.
 
 ### Technical & Mathematics
 
-All books here I have extensive experience using, but obviously such books are not a front to back type of read. For some of the books, some sections are skipped. Whether it be due to previously knowledge or just not needing the material. However, I don't feel ratings are fair or useful for any practical purposes without a deep expertise in both the fields they cover and the various texts available.
+All books here I have extensive experience using, however, I don't feel ratings here are fair or useful for any practical purposes without a deep expertise in both the fields they cover and the various texts available. 
+
+For example, I beleive it takes a Ph.D. level of knowledge and experience (up to interpretation) of real analysis, along with having read multiple books on the field such as Tao's _Analysis I_, Abbott's _Understanding Analysis_, and perhaps more, in order to review _Priciples of Mathematical Analysis_ by Rudin in any fair and substantial way.
 
 These are simply the books I've used/read which I think are worthwhile.
 
 | Book | Author | Field |
 |------|---------|---------|
 | _Principles of Mathematical Analysis_ | Walter Rudin | Real Analysis |
-| _Applied Combinatorics_ | Mitchel T. Keller, William T. Trotter | Combinatorics |
+| _Complex Variables and Applications_ | James Brown, Ruel Churchill | Complex Analysis |
+| _Essentials of Stochastic Processes_ | Richard Durrett | Stochastic Processes |
 | _Elements of Information Theory_ | Thomas M. Cover, Joy A. Thomas | Information Theory |
 | _Abstract Algebra and Its Applications_ | Various | Algebra |
 | _Deep Learning_ | Ian Goodfellow et al. | Deep Learning |
 | _An Introduction to Statistical Learning_ | James, Witten, Hastie, Tibshirani, Taylor | Machine Learning |
+| _Probability: An Introduction | Geoffrey Grimmett, Dominic Welsh | Probability |
+| _Applied Combinatorics_ | Mitchel T. Keller, William T. Trotter | Combinatorics |
 
 ## Rating System
 
