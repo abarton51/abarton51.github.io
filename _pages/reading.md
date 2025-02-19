@@ -1,13 +1,14 @@
 ---
-permalink: /reading/
+permalink: /readings/
 title: "Reading Journal"
 excerpt: "Book Reviews & Reading Lists"
 author_profile: true
 redirect_from: 
-  - /readings
+  - /reading
+  - /reading-journal
 ---
 
-This page serves as both a personal reading journal and a resource for others seeking book recommendations. Hope you enjoy!
+This page serves as both a personal reading journal and a resource for others seeking book recommendations. Hope you enjoy! :book:
 
 ## Currently Reading
 
@@ -20,6 +21,7 @@ This page serves as both a personal reading journal and a resource for others se
 - _The Wager_ by David Grann
 - _Crime and Punishment_ by Fyodor Dostoevsky
 - _Slaughterhouse Five_ by Kurt Vonnegut
+- Metamorphosis by Franz Kafka
 - _Frankenstein_ by Mary Shelly
 - _Do No Harm_ by Henry Marsh
 - _A Farewell to Arms_ by Ernst Hemingway
@@ -30,37 +32,43 @@ Books are rated within their respective genre.
 
 [Rating System](#rating-system)
 
-### Literature & Philosophy
+### Literature
 
-| Book | Author | Rating | Genre |
+| Book | Author | Rating | Sub-Genres |
 |------|---------|---------|--------|
-| _The Brothers Karamazov_ | Fyodor Dostoevsky | 9.9 | Literature |
-| _Crime and Punishment_ | Fyodor Dostoevsky | 9.5 | Literature |
-| _Confessions_ | Augustine | 9.0 | Religion/Philosophy |
-| _Notes from Underground_ | Fyodor Dostoevsky | 8.6 | Philosophy |
-| _Paradise Lost_ | John Milton | 8.5 | Epic/Poetry |
-| _Slaughterhouse Five_ | Kurt Vonnegut | 9.5 | Literature |
-| _Frankenstein_ | Mary Shelley | 9.0 | Literature |
-| _The Old Man and the Sea_ | Ernest Hemingway | 8.5 | Literature |
-| _A Farewell to Arms_ | Ernest Hemingway | 8.7 | Literature |
-| _A Tale of Two Cities_ | Charles Dickens | 8.2 | Literature |
-| _The Myth of Sisyphus_ | Albert Camus | 8.6 | Philosophy |
+| _The Brothers Karamazov_ | Fyodor Dostoevsky | 9.9 | Tragicomedy |
+| _Crime and Punishment_ | Fyodor Dostoevsky | 9.5 | Psychological Realism |
+| _Notes from Underground_ | Fyodor Dostoevsky | 8.6 | Philisophical Novella |
+| _Paradise Lost_ | John Milton | 8.5 | Epic, Poetry |
+| _Slaughterhouse Five_ | Kurt Vonnegut | 9.5 | Historical Science Fiction |
+| _Frankenstein_ | Mary Shelley | 9.0 | Gothic |
+| _The Old Man and the Sea_ | Ernest Hemingway | 8.5 | Adventure Novella |
+| _A Farewell to Arms_ | Ernest Hemingway | 8.7 | Romance, War, Historical Fiction |
+| _A Tale of Two Cities_ | Charles Dickens | 8.2 | Historical Fiction |
+| _Metamorphosis_ | Franz Kafka | 9.3 | Modernist Fiction |
+
+### Philosophy
+
+| Book | Author | Rating | Sub-Genres |
+|------|---------|------|---------|
+| _The Myth of Sisyphus_ | Albert Camus | 9.0 | Absurdism |
+| _Confessions_ | Augustine | 9.0 | Christianity, Autobiography, Theology |
 
 ### Non-Fiction & Memoirs
 
-| Book | Author | Rating | Genre |
+| Book | Author | Rating | Sub-Genres |
 |------|---------|---------|--------|
-| _The Wager_ | David Grann | 9.5 | Historical/Adventure |
-| _The Emerald Mile_ | Kevin Fedarko | 8.9 | Adventure/Historical |
+| _The Wager_ | David Grann | 9.5 | Historical, Adventure |
+| _The Emerald Mile_ | Kevin Fedarko | 8.9 | Adventure, Historical |
 | _Do No Harm_ | Henry Marsh | 9.5 | Medicine |
-| _When Breath Becomes Air_ | Paul Kalanithi | 9.0 | Memoir |
+| _When Breath Becomes Air_ | Paul Kalanithi | 9.0 | Memoir, Medicine |
 | _Being Mortal_ | Atul Gawande | 8.5 | Medicine |
 | _Complications_ | Atul Gawande | 8.0 | Medicine |
 | _Journey through Genius_ | William Dunham | 8.4 | Math History |
 
 ### Technical & Mathematics
 
-All books here I have extensive experience using, but obviously such books are not a front to back type of read. For some of the books here, I have skipped large sections due to previously knowledge or just not needing the material, but I can confidently say that I read most of each book and am able to make a fair rating of the book for all practical purposes.
+All books here I have extensive experience using, but obviously such books are not a front to back type of read. For some of the books, some sections are skipped. Whether it be due to previously knowledge or just not needing the material. However, I can confidently say that I read most of each book and am able to make a fair rating of the book for all practical purposes.
 
 | Book | Author | Rating | Field |
 |------|---------|---------|--------|
@@ -90,6 +98,7 @@ All books here I have extensive experience using, but obviously such books are n
 4. _The Emperor of All Maladies_ by Siddhartha Mukherjee
 5. _Moby Dick_ by Herman Melville
 6. _Man's Search for Meaning_ by Viktor Frankl
+7. _The Fellowship of the Ring_ by J.R.R. Tolkien
 
 ### Technical
 
