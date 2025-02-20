@@ -37,7 +37,7 @@ Linux is what powers most of the world's servers. And it feels really nice to ha
 
 ## Why Linux Mint?
 
-If you're not familiar, Linux is really just the kernel :neckbeard: :point_up:. The entire operating system is a combination of GNU software and the Linux kernel.
+If you're not familiar, Linux is really just the kernel :point_up:. The entire operating system is a combination of GNU software and the Linux kernel.
 
 A Linux _distribution_ (colloquially knows as a distro) is a variant of the GNU+Linux operating system. Each variant has its own advantages, and many variants are forks of a common one. 
 
@@ -88,5 +88,5 @@ If you’ve ever thought about making the switch, I can’t recommend it enough.
 
 If you're in a position similar to where I was, where you're quite familiar with Linux but from a guest machine perspective (virtual machines, containers, SSH, etc.), the transition really is smooth and you'll find it actually so much easier to use very quickly. Even if you do work with Linux a lot, but not as a daily driver, I think there will always be a disconnect between you and the system as well as the entire FOSS community.
 
-Thanks for reading! :neckbeard:
+Thanks for reading!
 
