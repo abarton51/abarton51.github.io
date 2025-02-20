@@ -1,7 +1,7 @@
 ---
 permalink: /readings/
-title: "Reading Journal"
-excerpt: "Book Reviews & Reading Lists"
+title: "Readings"
+excerpt: "Tracker for documenting readings, high level ratings, and anticipated readings."
 author_profile: true
 redirect_from: 
   - /reading
@@ -12,6 +12,7 @@ This page serves as both a personal reading journal and a resource for others se
 
 ## Currently Reading
 
+- _The Eye of the World_ (WoT Series) by Robert Jordan
 - _Boys in the Boat_ by Daniel James Brown
 - _The Rust Programming Language_ by Steve Klabnik and Carol Nichols
 
@@ -38,7 +39,7 @@ Books are rated within their respective genre. Books I personally don't like or 
 
 | Book | Author | Rating | Sub-Genres |
 |------|---------|---------|--------|
-| _The Brothers Karamazov_ | Fyodor Dostoevsky | 9.9 | Tragicomedy |
+| _**The Brothers Karamazov**_ | Fyodor Dostoevsky | 9.9 | Tragicomedy |
 | _Crime and Punishment_ | Fyodor Dostoevsky | 9.5 | Psychological Realism |
 | _Notes from Underground_ | Fyodor Dostoevsky | 8.6 | Philisophical Novella |
 | _Paradise Lost_ | John Milton | 8.5 | Epic, Poetry |
@@ -48,6 +49,8 @@ Books are rated within their respective genre. Books I personally don't like or 
 | _A Farewell to Arms_ | Ernest Hemingway | 8.7 | Romance, War, Historical Fiction |
 | _A Tale of Two Cities_ | Charles Dickens | 8.2 | Historical Fiction |
 | _Metamorphosis_ | Franz Kafka | 9.3 | Modernist Fiction |
+| _Animal Farm_ | George Orwell | 8.9 | Satire, Dystopian Fiction |
+| _The Great Gatsby_ | F. Scott Fitzgerald | 8.0 | Tragedy |
 
 ### Philosophy
 
