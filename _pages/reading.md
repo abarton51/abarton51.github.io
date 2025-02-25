@@ -1,7 +1,7 @@
 ---
 permalink: /readings/
 title: "Readings"
-excerpt: "Tracker for documenting readings, high level ratings, and anticipated readings."
+excerpt: "Tracker for books that I read for enjoyment."
 author_profile: true
 redirect_from: 
   - /reading
@@ -22,10 +22,7 @@ This page serves as both a personal reading journal and a resource for others se
 - _The Wager_ by David Grann
 - _Crime and Punishment_ by Fyodor Dostoevsky
 - _Slaughterhouse Five_ by Kurt Vonnegut
-- Metamorphosis by Franz Kafka
-- _Frankenstein_ by Mary Shelly
 - _Do No Harm_ by Henry Marsh
-- _A Farewell to Arms_ by Ernst Hemingway
 
 ---
 
@@ -73,11 +70,11 @@ Books are rated within their respective genre. Books I personally don't like or 
 | _Complications_ | Atul Gawande | 8.0 | Medicine |
 | _Journey through Genius_ | William Dunham | 7.5 | Math History |
 
-### Technical & Mathematics
+### Math and Science
 
-All books here I have extensive experience using, however, I don't feel ratings here are fair or useful for any practical purposes without a deep expertise in both the fields they cover and the various texts available. 
+All books here I have extensive experience using, however, I don't feel ratings here are fair or useful for any practical purposes without a _deep_ expertise in both the fields they cover and the various texts available. 
 
-For example, I beleive it takes a Ph.D. level of knowledge and experience (up to interpretation) of real analysis, along with having read multiple books on the field such as Tao's _Analysis I_, Abbott's _Understanding Analysis_, and perhaps more, in order to review _Priciples of Mathematical Analysis_ by Rudin in any fair and substantial way.
+<!--For example, I beleive it takes a Ph.D. level of knowledge and experience (up to interpretation) of real analysis, along with having read multiple books on the field such as Tao's _Analysis I_, Abbott's _Understanding Analysis_, and perhaps more, in order to review _Priciples of Mathematical Analysis_ by Rudin in any fair and substantial way.-->
 
 These are simply the books I've used/read which I think are worthwhile.
 
