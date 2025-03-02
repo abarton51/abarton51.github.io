@@ -10,11 +10,11 @@ redirect_from:
 
 This page serves as both a personal reading journal and a resource for others seeking book recommendations. Enjoy. :book:
 
-## Currently Reading
+## Currently Reading :books:
 
-- _The Eye of the World_ (WoT Series) by Robert Jordan
-- _Boys in the Boat_ by Daniel James Brown
-- _The Rust Programming Language_ by Steve Klabnik and Carol Nichols
+- _The Great Hunt_ (WoT Series) by Robert Jordan :fallen_leaf:
+- _Boys in the Boat_ by Daniel James Brown :rowboat:
+- _The Rust Programming Language_ by Steve Klabnik and Carol Nichols :crab:
 
 ## Favorites
 
@@ -26,7 +26,7 @@ This page serves as both a personal reading journal and a resource for others se
 
 ---
 
-## Book Reviews
+## Tracker
 
 Books are rated within their respective genre. Books I personally don't like or that are rated < 7 are not included.
 
@@ -58,7 +58,14 @@ Books are rated within their respective genre. Books I personally don't like or 
 | _On the Consolation of Philosophy_ | Boethius | 8.6 | Neoplatonism, Memoir, Christian Theology |
 | _Meditations_ | Marcus Aurelius | 8.9 | Stoicism |
 
-### Non-Fiction & Memoirs
+### Fantasy
+
+| Book | Author | Rating | Sub-Genres |
+|------|---------|------|---------|
+| _The Eye of the World_ | Robert Jordan | 9.0 | High Fantasy |
+
+
+### Non-Fiction
 
 | Book | Author | Rating | Sub-Genres |
 |------|---------|---------|--------|
