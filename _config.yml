@@ -135,6 +135,9 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
+  gallery:
+    output: true
+    permalink: /:collection/:path/
   
 # Defaults
 defaults:
@@ -181,6 +184,15 @@ defaults:
     values:
       layout: single
       author_profile: true
+      share: true
+      comment: true
+  # _gallery
+  - scope:
+      path: ""
+      type: gallery
+    values:
+      layout: gallery
+      author_profile: false
       share: true
       comment: true
 
