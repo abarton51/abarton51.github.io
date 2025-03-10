@@ -13,7 +13,6 @@ This page serves as both a personal reading journal and a resource for others se
 ## Currently Reading :books:
 
 - _The Great Hunt_ (WoT Series) by Robert Jordan :fallen_leaf:
-- _Boys in the Boat_ by Daniel James Brown :rowboat:
 - _The Rust Programming Language_ by Steve Klabnik and Carol Nichols :crab:
 
 ## Favorites
@@ -70,6 +69,7 @@ Books are rated within their respective genre. Books I personally don't like or 
 | Book | Author | Rating | Sub-Genres |
 |------|---------|---------|--------|
 | _The Wager_ | David Grann | 9.4 | Historical, Adventure |
+| _The Boys in the Boat_ | Daniel James Brown | 9.0 | Sports, Historical |
 | _The Emerald Mile_ | Kevin Fedarko | 8.5 | Adventure, Historical |
 | _Do No Harm_ | Henry Marsh | 9.1 | Medicine |
 | _When Breath Becomes Air_ | Paul Kalanithi | 9.0 | Memoir, Medicine |
