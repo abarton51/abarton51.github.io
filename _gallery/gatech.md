@@ -8,4 +8,6 @@ description: "Goergia Tech Campus."
 images:
     - file: "tech_tower.jpg"
       title: "Tech Tower from steps."
+    - file: "tech_tower_branch.jpg"
+      title: "Tech Tower and trees in winter."
 ---
