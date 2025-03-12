@@ -14,6 +14,7 @@ group :jekyll_plugins do
   gem 'jekyll-include-cache'
 end
 
+gem 'json', ">= 2.10.2"
 gem "webrick", "~> 1.8"
 gem "nokogiri", ">= 1.18.3"
 
