@@ -10,4 +10,6 @@ images:
       title: "Tech Tower from steps."
     - file: "tech_tower_branch.jpg"
       title: "Tech Tower and trees in winter."
+    - file: "bird_triangle_branches.jpg"
+      title: "Female Downy Woodpecker."
 ---
