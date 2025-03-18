@@ -5,6 +5,15 @@ permalink: /posts/2025/02/01/rust-ownership.md/
 author: "Austin B."
 ---
 
+<script type="module">
+	import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.5/+esm';
+	mermaid.initialize({
+		startOnLoad: true,
+		theme: 'dark',
+		securityLevel: 'loose'
+	});
+</script>
+
 # Preface
 
 I am *not* an expert in Rust. In fact, I have just recently taken up the endeavor of learning Rust. I am currently finishing my first end-end read of the _The Rust Programming Language_ by Steve Klabnik and Carol Nichols. This book is **fantastic** and I highly recommend it for learning. In addition to this reading, I am using Rust as my language of choice for a numerical analysis course as well as a small TCP chat application I'm working on in my free time.
@@ -40,11 +49,12 @@ There are generally two types of programming languages:
 - **Programmer** manages memory
   - C, C++, Rust, etc.
 
-#### Rust's Approach
+### Rust's Approach
 
 Rust is in the category where the programmer manages memory. *However*, Rust's compiler enforces safe memory management. More specifically, it has a portion of the compiler called the **borrow checker**, which is specifically designed to ensure references to memory are always valid, there are not data races, and that ownership rules are being followed. 
 
 The borrow checker achieves this through analyzing:
+
 - **Ownership**
 - **Borrowing** (for later)
 - **Lifetimes** (for later)
@@ -102,7 +112,7 @@ Rust takes a different path: the memory is automatically freed once the variable
 
 Here is the `String` that `s` is bound to visualized in memory while `s` is in its scope:
 
-```mermaid
+<prev class="mermaid">
 graph TD; 
 	subgraph String_Contents["yellow: Data on Heap"]
 		direction TB
@@ -119,7 +129,7 @@ graph TD;
 		len["Length: 5"]
 		cap["Capacity: 8"]
 	end
-```
+</prev>
 
 Once out of scope, `s` is invalidated and the heap allocated memory is freed through Rust's RAII (Resource Acquisition Is Initialization) pattern. In C, the programmer would do this with `free()`. However, Rust automatically calls the `drop` function for us, which handles memory cleanup.
 
@@ -133,8 +143,8 @@ println!("{}", s1); // ERROR: s1 is moved
 
 Rust prevents double frees by invalidating `s1`. This is illustrated below with the (MOVED) label.
 
-```mermaid
-graph TD; 
+<prev class="mermaid">
+graph TD;
 	subgraph String_Contents["yellow"]
 		direction TB
 		char_0["0: 'y'"]
@@ -157,7 +167,7 @@ graph TD;
 		len_2["Length: 5"]
 		cap_2["Capacity: 8"]
 	end
-```
+</prev>
 
 Notice that `s1` still exists and is bound to the same data that `s2` is within its corresponding scope, but the *ownership* of the data is *moved* from `s1` to `s2`. This invalidates usage of `s1` since only one owner is allowed.
 
@@ -179,7 +189,7 @@ let s2 = s1.clone();
 println!("{} and {}", s1, s2); // Both are valid
 ```
 
-```mermaid
+<prev class="mermaid">
 graph TD; 
 	subgraph String_Contents_1["yellow"]
 		direction TB
@@ -213,7 +223,7 @@ graph TD;
 		len_2["Length: 5"]
 		cap_2["Capacity: 8"]
 	end
-```
+</prev>
 
 Note that the pointers in `s1` and `s2` are different. Cloning allocates data on the heap, copies the data to that location, and creates a new `String` structure pointing to that data. `s1` maintains ownership because it is still the sole owner of its data and `s2` is the sole owner of its data.
 
