@@ -112,7 +112,7 @@ Rust takes a different path: the memory is automatically freed once the variable
 
 Here is the `String` that `s` is bound to visualized in memory while `s` is in its scope:
 
-<prev class="mermaid">
+<pre class="mermaid">
 graph TD; 
 	subgraph String_Contents["yellow: Data on Heap"]
 		direction TB
@@ -129,7 +129,7 @@ graph TD;
 		len["Length: 5"]
 		cap["Capacity: 8"]
 	end
-</prev>
+</pre>
 
 Once out of scope, `s` is invalidated and the heap allocated memory is freed through Rust's RAII (Resource Acquisition Is Initialization) pattern. In C, the programmer would do this with `free()`. However, Rust automatically calls the `drop` function for us, which handles memory cleanup.
 
@@ -143,7 +143,7 @@ println!("{}", s1); // ERROR: s1 is moved
 
 Rust prevents double frees by invalidating `s1`. This is illustrated below with the (MOVED) label.
 
-<prev class="mermaid">
+<pre class="mermaid">
 graph TD;
 	subgraph String_Contents["yellow"]
 		direction TB
@@ -167,7 +167,7 @@ graph TD;
 		len_2["Length: 5"]
 		cap_2["Capacity: 8"]
 	end
-</prev>
+</pre>
 
 Notice that `s1` still exists and is bound to the same data that `s2` is within its corresponding scope, but the *ownership* of the data is *moved* from `s1` to `s2`. This invalidates usage of `s1` since only one owner is allowed.
 
@@ -189,7 +189,7 @@ let s2 = s1.clone();
 println!("{} and {}", s1, s2); // Both are valid
 ```
 
-<prev class="mermaid">
+<pre class="mermaid">
 graph TD; 
 	subgraph String_Contents_1["yellow"]
 		direction TB
@@ -223,7 +223,7 @@ graph TD;
 		len_2["Length: 5"]
 		cap_2["Capacity: 8"]
 	end
-</prev>
+</pre>
 
 Note that the pointers in `s1` and `s2` are different. Cloning allocates data on the heap, copies the data to that location, and creates a new `String` structure pointing to that data. `s1` maintains ownership because it is still the sole owner of its data and `s2` is the sole owner of its data.
 
