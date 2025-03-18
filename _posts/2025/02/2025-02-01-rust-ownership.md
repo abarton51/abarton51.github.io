@@ -30,65 +30,55 @@ Enjoy :crab:
 
 *Ownership* is a set of rules that govern how a Rust program manages memory. All programs have to manage the way they use a computer's memory while running. 
 
-Some languages have garbage collection that regularly looks for no longer used memory as the program runs. In other languages, the programmer must explicitly allocate and free the memory.
+### Approaches to Managing Memory :thought_balloon:
 
-Rust uses a third approach: memory is managed through a system of ownership with a set of rules that the compiler checks. If any of the rules are violated, the program won't compile. None of the features of ownership will slow down your program while it's running.
+There are generally two types of programming languages:
+
+- **Garbage Collector (GC)** manages memory :garbage:
+  - Java, Python, Go, etc.
+
+- **Programmer** manages memory
+  - C, C++, Rust, etc.
+
+#### Rust's Approach
+
+Rust is in the category where the programmer manages memory. *However*, Rust's compiler enforces safe memory management. More specifically, it has a portion of the compiler called the **borrow checker**, which is specifically designed to ensure references to memory are always valid, there are not data races, and that ownership rules are being followed. 
+
+The borrow checker achieves this through analyzing:
+- **Ownership**
+- **Borrowing** (for later)
+- **Lifetimes** (for later)
 
 ### Ownership Rules
 
-First, let's take a look at the ownership rules. Keep these rules in mind as we work through the examples that illustrate them:
+Let's take a look at the ownership rules. Keep these rules in mind as we work through the examples that illustrate them:
 
 - Each value in Rust has an *owner*.
 - There can only be one owner at a time.
 - When the owner goes out of scope, the value will be dropped.
 
-### Variable Scope
+### Scope and Ownership :telescope:
 
-A *scope* is the range within a program for which an item is *valid*. Take the following variable:
-
-```rust
-let s = "hello";
-```
-
-The variable `s` refers to a string literal, where the value of the string is hardcoded into the text of the program. The variable is valid from the point at which it's declared until the end of the current *scope*.
+A variable is valid within its scope:
 
 ```rust
-{                       // s is not valid here, it's not yet declared
-    let s = "hello";    // s is valid from this point forward
-
-    // do stuff with s
-}
-                        // this scope is now over, and s is no longer valid
+{                       // s is not valid here, because it isn't declared yet
+    let s = "yellow";    // s is valid here
+}                       // s goes out of scope
 ```
 
-In other words, there are two important points in time here:
+There are two important points in time here:
 
 - When `s` comes *into* scope, it is valid.
 - It remains valid until it goes out of scope.
 
 At this point, the relationship between scopes and when variables are valid is similar to that in other languages.
 
-### The `String` Type
+In this example, `s` owns the `String`. Why this matters and what this means we will explain in more detail in the next section.
 
-The `String` type manages data allocated on the heap and as such is able to store an amount of text that is unknown to us at compile time. You can create a `String` from a string literal using the `from` function, like so:
+### Moving Ownership :dash:
 
-```rust
-let s = String::from("hello");
-```
-
-The double colon `::` operator allows us to namespace this particular `from` function under the `String` type rather than using some sort of name like `string_from`.
-
-This kind of string can be mutated:
-
-```rust
-let mut s = String::from("hello");
-s.push_str(", world!");
-println!("{s}");
-```
-
-### Memory and Allocation
-
-With the `String` type, in order to support a mutable, growable piece of text, we need to allocate an amount of memory on the _heap_, unkown at compile time, to hold the contents. This means:
+The `String` type manages data allocated on the **heap** and as such is able to store an amount of text that is unknown to us at compile time. This is in contrast to the `str` data type, which is not. There are two things that need to be be taken care when managing memory on the heap:
 
 - The memory must be requested from the memory allocator at runtime.
 - We need a way of returning this memory to the allocator when we're done with our `String`.
@@ -97,65 +87,218 @@ That first part is done by us: when we call `String::from`, its implementation r
 
 In languages with a *garbage collector* (GC), the GC keeps track of and cleans up memory that isn't being used anymore, and we don't need to think about it.
 
-In most languages without a GC, it's our responsibility to identify when memory is no longer being used and to call code to explicitly free it, just as we did to request it. Doing this correctly has historically been a difficult programming problem. If we forget, we'll waste memory. If we do it too early, we'll have an invalid variable (such as a _dangling reference_). If we do it twice, that's a bug too. We need to pair exactly one `allocate` with exactly one `free`.
+In most languages without a GC, it's our responsibility to identify when memory is no longer being used and to call code to explicitly free it, just as we did to request it. 
 
-Rust takes a different path: the memory is automatically returned once the variable that owns it goes out of scope. Here's a version of our scope example using a `String`:
+- Doing this correctly has historically been a difficult programming problem. If we forget, we'll waste memory. If we do it too early, we'll have an invalid variable (such as a _dangling reference_). If we do it twice, that's a bug too (free-after-free). We need to pair exactly one `allocate` with exactly one `free`.
+
+Rust takes a different path: the memory is automatically freed once the variable that *owns* it goes out of scope. Here is the example again with annotations and a visualization to help explain what is happening here:
 
 ```rust
 {
-    let s = String::from("hello");  // s is valid from this point forward
-
-    // do stuff with s
-}                                   // this scope is now over and s is no longer valid
+	let s = String::from("yellow"); // s is valid here
+} // s goes out of scope. 
+// Rust drops s, freeing the memory allocated on the heap
 ```
 
-There is a natural point at which we can return the memory our `String` needs to the allocator: when `s` goes out of scope. When a variable goes out of scope, Rust calls a special function for us. This function is called `drop`, and it's where the author of `String` can put the code to return the memory. Rust calls `drop` automatically at the closing curly bracket.
+Here is the `String` that `s` is bound to visualized in memory while `s` is in its scope:
 
-#### Variables and Data Interacting with Move
+```mermaid
+graph TD; 
+	subgraph String_Contents["yellow: Data on Heap"]
+		direction TB
+		char_0["0: 'y'"]
+		char_1["1: 'e'"]
+		char_2["2: 'l'"]
+		char_3["3: 'l'"]
+		char_4["4: 'o'"]
+		char_5["5: 'w'"]
+	end
+	subgraph String_Type["s: String Structure"]
+		direction TB
+		ptr["Pointer: 0x1234"] --> char_0
+		len["Length: 5"]
+		cap["Capacity: 8"]
+	end
+```
 
-Earlier, we said that when a variable goes out of scope, Rust automatically calls the `drop` function and cleans up the heap memory for that variable. But if we have two variables with pointers to the same location in memory, this is a problem. If Rust were to free both, then we would get a *double free* error. Freeing memory twice can lead to memory corruption, which can potentially lead to security vulnerabilities.
+Once out of scope, `s` is invalidated and the heap allocated memory is freed through Rust's RAII (Resource Acquisition Is Initialization) pattern. In C, the programmer would do this with `free()`. However, Rust automatically calls the `drop` function for us, which handles memory cleanup.
 
-Rust considers the previous variable bound to the pointer as invalid. Therefore, Rust doesn't need to free anything when the previous variable goes out of scope.
+When assigning a `String` to another variable, ownership *moves*:
 
-If you try to use an invalidated reference, Rust will prevent you.
+```rust
+let s1 = String::from("yellow");
+let s2 = s1; // s1 is now invalid
+println!("{}", s1); // ERROR: s1 is moved
+```
 
-If you've heard the term *shallow copy* and *deep copy* while working with other languages, the concept of copying the pointer, length, and capacity without dopying the data probably sounds like making a shallow copy. But because Rust also invalidates the first variable, instead of being called a shallow copy, it's known as a *move*.
+Rust prevents double frees by invalidating `s1`. This is illustrated below with the (MOVED) label.
 
-#### Scope and Assignment
+```mermaid
+graph TD; 
+	subgraph String_Contents["yellow"]
+		direction TB
+		char_0["0: 'y'"]
+		char_1["1: 'e'"]
+		char_2["2: 'l'"]
+		char_3["3: 'l'"]
+		char_4["4: 'o'"]
+		char_5["5: 'w'"]
+	end
+	subgraph String_Type_1["s1 (MOVED)"]
+		direction TB
+		ptr_1["Pointer: 0x1234 (moved)"]
+		len_1["Length: 5 (moved)"]
+		cap_1["Capacity: 8 (moved)"]
+	end
 
-The inverse of this is true for the relationship between scoping, ownership, and memory being freed via `drop` function as well. When you assign a completely new value to an existing variable, Rust will call `drop` and free the original value's memory immediately.
+	subgraph String_Type_2["s2"]
+		direction TB
+		ptr_2["Pointer: 0x1234"] --> char_0
+		len_2["Length: 5"]
+		cap_2["Capacity: 8"]
+	end
+```
 
-#### Variables and Data Interacting with Clone
+Notice that `s1` still exists and is bound to the same data that `s2` is within its corresponding scope, but the *ownership* of the data is *moved* from `s1` to `s2`. This invalidates usage of `s1` since only one owner is allowed.
 
-If we *do* want to deeply copy the heap data of the `String`, not just the stack data, we can use a common method called `clone`.
+The data on the heap still has *one owner* - `s2` and when `s2` (not `s1`) goes out of scope, Rust can safely deallocate the memory on the heap without worrying about any bugs since any previous owners, such as `s1`, have moved their ownership and are invalid.
 
-#### Stack-Only Data: Copy
+If Rust allowed both of these variables to have ownership, there are possibilities of dangling references, use-after-frees, double frees, and just having data that was not expected.
 
-Types of data such as integers that have a known size at compile time are stored entirely on the stack, so copies of the actual values are quick to make. That means there's no reason we would want to prevent such a variable from being valid after we create another variable assigned to it. In other words, there is no difference between deep and shallow copying here, so calling `clone` wouldn't do anything different from the usual shallow copying. 
+If you’ve heard the term _shallow copy_ and _deep copy_ while working with other languages, the concept of copying the pointer, length, and capacity without copying the data probably sounds like making a shallow copy. The only difference here is that Rust tracks ownership in order to safely and properly free heap allocated memory.
 
-Rust has a special annotation called the `Copy` trait that we can place on types that are stored on the stack, as integers are. If a type implements the `Copy` trait, variables that use it do not move, but rather are trivially copied, making them still valid after assignment to another variable.
+### 4. Cloning Data :robot:
 
-Rust won't let us annotate a type with `Copy` if the type has implemented the `Drop` trait. If the type needs something special to happen when the value goes out of scope and we add the `Copy` annotation to that type, we'll get a compile-time error.
+If a deep copy is needed, use `.clone()`.
 
-So, what types implement the `Copy` trait? As a general rule, any group of simple scalar values can implement `Copy`, and nothing that requires allocation or is some form of resource can implement `Copy`.
+This creates a second `String` the is a *clone* of the first one. That is, two separate and distinct memory allocated forms of data that contain the same contents that it points to. 
 
-### Ownership and Functions
+```rust
+let s1 = String::from("yellow");
+let s2 = s1.clone();
+println!("{} and {}", s1, s2); // Both are valid
+```
 
-The mechanics of passing a value to a function are similar to those when assigning a value to a variable. Passing a variable to a function will move or copy, just as assignment does.
+```mermaid
+graph TD; 
+	subgraph String_Contents_1["yellow"]
+		direction TB
+		char_0_1["0: 'y'"]
+		char_1_1["1: 'e'"]
+		char_2_1["2: 'l'"]
+		char_3_1["3: 'l'"]
+		char_4_1["4: 'o'"]
+		char_5_1["5: 'w'"]
+	end
+	subgraph String_Type_1["s1"]
+		direction TB
+		ptr_1["Pointer: 0x1234"] --> char_0_1
+		len_1["Length: 5"]
+		cap_1["Capacity: 8"]
+	end
 
-### Return Values and Scope
+	subgraph String_Contents_2["yellow"]
+		direction TB
+		char_0_2["0: 'y'"]
+		char_1_2["1: 'e'"]
+		char_2_2["2: 'l'"]
+		char_3_2["3: 'l'"]
+		char_4_2["4: 'o'"]
+		char_5_2["5: 'w'"]
+	end
 
-Returning values can also transfer ownership.
+	subgraph String_Type_2["s2"]
+		direction TB
+		ptr_2["Pointer: 0x2345"] --> char_0_2
+		len_2["Length: 5"]
+		cap_2["Capacity: 8"]
+	end
+```
 
-The ownership of a variable follows the same pattern every time: assigning a value to another variable moves it. When a variable that includes data on the heap goes out of scope, the value will be cleaned up by drop unless ownership of the data has been moved to another variable.
+Note that the pointers in `s1` and `s2` are different. Cloning allocates data on the heap, copies the data to that location, and creates a new `String` structure pointing to that data. `s1` maintains ownership because it is still the sole owner of its data and `s2` is the sole owner of its data.
 
-While this works, taking ownership and then returning ownership with every function is a bit tedious. What if we want to let a function use a value but not take ownership? It’s quite annoying that anything we pass in also needs to be passed back if we want to use it again, in addition to any data resulting from the body of the function that we might want to return as well.
+### 5. Copy Trait
 
-But this is too much ceremony and a lot of work for a concept that should be common. Luckily for us, Rust has a feature for using a value without transferring ownership, called references.
+Types that have a known size at compile time and don't require special cleanup when dropped can implement the `Copy` trait, allowing them to be duplicated rather than moved:
 
-***
+```rust
+let x = 5;
+let y = x; // x is still valid because integers implement Copy
+```
+
+This works for all primitive types as all primitive types in Rust implement `Copy` and are stored on the **stack**.
+
+### 6. Ownership and Functions :passport_control:
+
+Passing a variable to a function moves ownership:
+
+```rust
+fn takes_ownership(s: String) {
+    println!("{}", s);
+} // s is dropped here
+
+let s = String::from("hello");
+takes_ownership(s);
+println!("{}", s); // ERROR: s is moved
+```
+
+This might seem weird, but let's think about why this is a problem. After `take_ownership(s)`, if we accessed `s`, how are we to know what `s` is or if it's anything at all? **We don't** (or at least, that's what we assume).
+
+This feature of ownership is a result of Rust's compiler dropping and invalidating variables to prevent bugs like double-frees. If this code above was valid, pesky bugs like that can exist.
+
+Returning a value transfers ownership back:
+
+```rust
+fn gives_ownership() -> String {
+    String::from("hello")
+}
+
+let s = gives_ownership(); // s now owns the value
+```
+
+Remember the previous code that gave an error? Well we can solve it with this:
+
+```rust
+fn takes_ownership(s2: String) {
+    println!("{}", s2);
+    s2
+} // s2 is dropped here
+
+let s1 = String::from("hello");
+let s2 = takes_ownership(s1);
+println!("{}", s2); // Yay, it works!
+```
+
+This seems redundant and a bit annoying, and in truth it is. We could've made a clone with `s.clone()` instead also to pass to `takes_ownership`. The `takes_ownership` function doesn't *need* to own the `String`.
+
+This is where **references** come in. Instead of having the function take ownership of the variable, it an *borrow* the variable by taking a *reference* to the variable.
+
+With understanding ownership now, you'll be well on your way with references! :smile:
+
+---
 
 # Summary
 
-Overall, **ownership** is Rust's way of making sure that before we compile our code, we are *sure* that pesky bugs in basic memory management won't occur. Memory management is a complex task and making your code memory safe in an unsafe language can be a difficult task. Ownership is really the first step Rust takes to ensure that our code is memory safe.
+Rust provides memory safety without a garbage collector, making it both efficient and reliable. 
+
+Its ownership system ensures safe memory management through strict rules: each value has a single owner, and ownership transfers prevent invalid memory access. Understanding ownership is crucial for writing Rust code effectively.
+
+Now that you know Rust’s core principles and how ownership works, you can start coding! 
+
+To create a new Rust project, which we refer to as a **crate**, simply run:
+-  `cargo new <project_name>`
+
+You can run the crate by running:
+- `cargo run`
+
+In Rust, the compiler is your friend (just an uptight one). Rust has lots of features to teach and guide you. You can even get detailed explanations of error messages using:
+- `rustc --explain`
+
+The official [Rust Book](https://doc.rust-lang.org/book/title-page.html) and [Rustlings](https://github.com/rust-lang/rustlings) exercises are great next steps. Soon enough you'll consider yourself an experienced Crustacean. Happy coding!
+
+## References
+
+1. Klabnik, S., & Krycho, C. (n.d.). _The rust programming language_. The Rust Programming Language - The Rust Programming Language. https://doc.rust-lang.org/book/title-page.html
+2. Stack Overflow Community. (1960, August 1). _What does rust have instead of a garbage collector?_. Stack Overflow. https://stackoverflow.com/questions/32677420/what-does-rust-have-instead-of-a-garbage-collector
+3. _Rustlings_. rustlings. (n.d.). https://rustlings.cool/
 
