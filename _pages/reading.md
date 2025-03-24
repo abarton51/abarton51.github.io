@@ -12,7 +12,7 @@ This page serves as both a personal reading journal and a resource for others se
 
 ## Currently Reading :books:
 
-- _The Great Hunt_ (WoT Series) by Robert Jordan :fallen_leaf:
+- _The Dragon Reborn_ (WoT Series) by Robert Jordan :fallen_leaf:
 - _The Rust Programming Language_ by Steve Klabnik and Carol Nichols :crab:
 
 ## Favorites
@@ -61,7 +61,8 @@ Books are rated within their respective genre. Books I personally don't like or 
 
 | Book | Author | Rating | Sub-Genres |
 |------|---------|------|---------|
-| _The Eye of the World_ | Robert Jordan | 9.0 | High Fantasy |
+| _The Great Hunt_ | Robert Jordan | 9.0 | High Fantasy, WoT Series - Book 2 |
+| _The Eye of the World_ | Robert Jordan | 9.0 | High Fantasy, WoT Series - Book 1 |
 
 
 ### Non-Fiction
@@ -79,11 +80,7 @@ Books are rated within their respective genre. Books I personally don't like or 
 
 ### Math and Science
 
-All books here I have extensive experience using, however, I don't feel ratings here are fair or useful for any practical purposes without a _deep_ expertise in both the fields they cover and the various texts available. 
-
-<!--For example, I beleive it takes a Ph.D. level of knowledge and experience (up to interpretation) of real analysis, along with having read multiple books on the field such as Tao's _Analysis I_, Abbott's _Understanding Analysis_, and perhaps more, in order to review _Priciples of Mathematical Analysis_ by Rudin in any fair and substantial way.-->
-
-These are simply the books I've used/read which I think are worthwhile.
+All books here I have extensive experience using, however, I don't feel ratings here are fair or useful for any practical purposes. These are simply the books I've used/read which I think are worthwhile.
 
 | Book | Author | Field |
 |------|---------|---------|
@@ -143,5 +140,5 @@ Give me some recommendations. These are books that stick out to me that I intend
 
 ---
 
-_Last updated: February 2024_
+_Last updated: March 2025_
 
