@@ -11,7 +11,9 @@ Imagine being stranded on a barren island, surrounded by starving, desperate men
 
 Welcome to this small dive into _The Wager_ by David Grann, a remarkable nonfiction story of survival, mutiny, the human condition, and resilience. Today, I want to focus on one of the most compelling figures in this harrowing true story: John Bulkeley. Through his actions and beliefs, he emerged as a figure of moral righteousness and an early pioneer of Lockean ideals- the very principles that would later define the American spirit. By examining his resilience and unwavering ethics, we can uncover a profound lesson on perseverance and moral integrity in the darkest of times.
 
-![](/images/wager-book-ship.jpg)
+<img src="/images/wager-book-upright.jpg" width="384" alt="My 'The Wager' book copy" />
+
+_My copy of 'The Wager'_
 
 ## _Summary of The Wager_ :anchor:
 
@@ -20,6 +22,11 @@ _The Wager_ recounts the real-world events surrounding the wreck of the British 
 What followed was a brutal test of human endurance, where starvation, mutiny, and the struggle for survival exposed the rawest elements of human nature.
 
 As the survivors splintered into factions, a striking contrast emerged between those who succumbed to base savagery and those who upheld their principles. Among them were John Byron, David Cheap, and, most notably, John Bulkeley, who stood out as a beacon of integrity and leadership.
+
+
+<img src="/images/wager-book-ship.jpg" width="600" alt="'The Wager' ship on the cover" />
+
+_Closeup of the ship depicted on the book's cover_
 
 ## Two Leaders Clash :collision:
 
@@ -94,6 +101,7 @@ I urge you to reflect on your own figures that stick out to you for inspiration.
 Stay true to yourself, keep your moral compass pointed north, and take every step you can to live virtuously and nobly even in the worst of times.
 
 
-![](/images/wager-book-katakana.jpg)
+<img src="/images/wager-book-katakana.jpg" width="600" alt="The Wager and a relevant saying Japanese expression" />
+
 _"Nana Korobi Ya Oki" - "Fall seven times, stand up eight"_
 
