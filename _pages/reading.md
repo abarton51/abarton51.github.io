@@ -12,8 +12,9 @@ This page serves as both a personal reading journal and a resource for others se
 
 ## Currently Reading :books:
 
-- _The Dragon Reborn_ (WoT Series) by Robert Jordan :fallen_leaf:
+- _The Shadow Rising_ (WoT Series) by Robert Jordan :fallen_leaf:
 - _The Rust Programming Language_ by Steve Klabnik and Carol Nichols :crab:
+- _Practical Malware Analysis_ by Michael Sikorski and Andrew Honig
 
 ## Favorites
 
@@ -59,10 +60,13 @@ Books are rated within their respective genre. Books I personally don't like or 
 
 ### Fantasy
 
-| Book | Author | Rating | Sub-Genres |
+#### The Wheel of Time
+
+| Book | Author | Rating | Book |
 |------|---------|------|---------|
-| _The Great Hunt_ | Robert Jordan | 9.0 | High Fantasy, WoT Series - Book 2 |
-| _The Eye of the World_ | Robert Jordan | 9.0 | High Fantasy, WoT Series - Book 1 |
+| _The Dragon Reborn_ | Robert Jordan | 8.9 | Book 3 |
+| _The Great Hunt_ | Robert Jordan | 9.0 | Book 2 |
+| _The Eye of the World_ | Robert Jordan | 9.1 | Book 1 |
 
 
 ### Non-Fiction
