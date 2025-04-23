@@ -2,7 +2,7 @@
 title: "A Beacon of Inspiration from _The Wager_ &mdash; John Bullkley"
 excerpt: "... when your life's ship struggles through rough freezing waters and wrecks leaving you stranded on a desolate island surrounded by depravity and suffering, draw inspiration John Bullkley's actions."
 permalink: /posts/2025/03/01/wager-bullkley.md/
-author: "Austin B."
+author: "Austin Barton"
 ---
 
 Imagine being stranded on a barren island, surrounded by starving, desperate men &mdash; some turning to savagery, others clinging to order. In this chaos, one man stood firm in his convictions: John Bulkeley. His story is not just one of survival, but of moral defiance against despair.

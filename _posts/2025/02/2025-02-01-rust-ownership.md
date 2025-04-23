@@ -2,7 +2,7 @@
 title: "Rust: Ownership"
 excerpt: Explaining how ownership in Rust works.
 permalink: /posts/2025/02/01/rust-ownership.md/
-author: "Austin B."
+author: "Austin Barton"
 ---
 
 <script type="module">

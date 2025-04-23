@@ -2,7 +2,7 @@
 title: "Rust: Validating References with Lifetimes"
 excerpt: Explaining how to validate references with lifetimes in Rust.
 permalink: /posts/2025/02/014/lifetimes.md/
-author: "Austin B."
+author: "Austin Barton"
 ---
 
 # Preface
