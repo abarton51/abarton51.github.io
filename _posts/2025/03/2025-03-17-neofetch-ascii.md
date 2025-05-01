@@ -152,7 +152,7 @@ Here are some snippets rom the art I use and created myself:
               *@@@@%#=                          =#%@@@@*
 ```
 
-<img src="/images/blog/2025/03/torii-neofetch.png" width="800" alt="My Torii ASCII art Displayed with Neofetch" />
+<img src="/images/blog/2025/03/torii-vibe.png" width="800" alt="My Torii ASCII art Displayed with Neofetch" />
 
 #### Torii with Sun
 
@@ -192,7 +192,7 @@ ${c2}
 
 If these look wonky, it's because the color variables that neofetch parses (`${ci}`) are removed. When printed, these look as they should.
 
-<img src="/images/blog/2025/03/torii-sun-neofetch.png" width="800" alt="My Torii ASCII art Displayed with Neofetch" />
+<img src="/images/blog/2025/03/torii-kanagawa.png" width="800" alt="My Torii ASCII art Displayed with Neofetch" />
 
 ## 6. Wrapping Up
 
