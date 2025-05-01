@@ -105,7 +105,8 @@ redirect_from:
 {% include base_path %}
 
 ## Education
-* (Current) B.S. in Mathematics and Computer Science, Georgia Institute of Technology, 2021-2025
+- (Current) M.S. in Cybersecurity, Montana State University, 2025-2026
+* B.S. in Mathematics and Computer Science, Georgia Institute of Technology, 2021-2025
 
 ## Research experience
 

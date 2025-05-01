@@ -10,7 +10,7 @@ redirect_from:
 
 ## **:wave: Hello**
 
-I am a graduate student veteran :mortar_board: at Montana State University pursuing an M.S. in Cybersecurity.
+I am a graduate student :mortar_board: at Montana State University pursuing an M.S. in Cybersecurity.
 
 I completed my B.S. in Mathematics and Computer Science at the Georgia Institute of Technology where I studied:
 - :pencil2: Mathematics, concentrating in Data Science :bar_chart:
