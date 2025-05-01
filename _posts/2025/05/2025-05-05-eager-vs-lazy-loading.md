@@ -20,8 +20,6 @@ We'll use Rust as our language of choice to learn lazy loading/evaluation. Part 
 
 Very briefly, we will explain the technical differences between evaluation and loading, but the pattern of eager vs. lazy is what matters, and many times evaluation and loading can refer to and include one another. More generally, you could say eager vs. lazy _execution_ (a bit of semantics, but it helps to be precise!).
 
-<br/>
-
 ---
 
 ## Loading and Evaluation
@@ -49,8 +47,6 @@ There two primary strategies:
 - **Lazy**: Defer loading/evaluation until it is actually needed.
 
 NOTE: From here on out, we will use focus on loading but in some cases we will use the term "loading" as a blanket term to refer to evaluation of certain transformations on the data as well.
-
-<br/>
 
 ---
 
@@ -95,8 +91,6 @@ You're at a buffet but only get up to get food when you're actually hungry for t
 - Slightly more complex implementation.
 - First access can incur a performance hit.
 - Must be carefully handled in multi-threaded programs.
-
-<br/>
 
 ---
 
@@ -218,8 +212,6 @@ You can also use `once_cell::Lazy` for global initialization (i.e., static varia
 
 With lazy loading, there are A LOT of optimizations that one can implement in addition. In the next section, we are going to demonstrate this using the Polars data manipulation library in Python.
 
-<br/>
-
 ---
 
 ## Pandas vs. Polars
@@ -278,8 +270,6 @@ result = (
 		.collect() # <-- execution happens here, returns a DataFrame
 )
 ```
-
-<br/>
 
 ---
 
@@ -357,15 +347,11 @@ let result = lf
 - Internally, Polars constructs a logical plan as a **directed acyclic graph (DAG)** of transformations.
 - No actual computation or data access occurs yet.
 
-<br/>
-
 2. **Query Optimization**
 - Polars performs predicate pushdown, projection pushdown, and simplification:
 	- Predicate pushdown: Filters are pushed as close as possible to the data source.
 	- Projection pushdown: Only columns used in downstream operations are loaded.
 	- Common subexpression elimination, type coercion, etc., also happen here.
-
-<br/>
 
 3. **Chunked Streaming Execution**
 - If streaming mode is supported and enabled (either explicitly or via .collect_streaming()), Polars processes data in batches:
@@ -373,21 +359,15 @@ let result = lf
 	- Applies the logical plan incrementally per batch.
 	- Intermediate results are discarded or aggregated without keeping the full dataset in memory.
 
-<br/>
-
 4. **Memory Efficient Aggregation**
 
 - Aggregations like `.group_by(...).agg(...)` maintain partial states across streamed chunks.
 - For example, `mean` is computed using running totals and counts.
 - The full table is never loaded — just the minimal state necessary for the final result.
 
-<br/>
-
 5. **Materialization on `.collect()`**
 - Once .collect() is called, the optimized query is executed and the final eager DataFrame is assembled.
 - Only this final result is materialized in memory.
-
-<br/>
 
 ---
 
@@ -406,8 +386,6 @@ Imagine your computer has a hierarchy of memory and execution stages:
 ```text
 [Disk] -> [RAM] -> [L1/L2 CPU Cache] -> [CPU Registers] -> [ALU]
 ```
-
-<br/>
 
 - Disk: Slow, persistent. Holds CSVs, Parquet files, etc.
 - RAM: Fast, volatile. Where your program keeps runtime data.
@@ -444,8 +422,6 @@ When your program loads large datasets:
 | GC pressure (GC langs e.g., Python) | High                         | Lower                                        |
 | Startup latency           | High (loads all)                      | Low (does nothing until needed)              |
 | File I/O                  | Full file read                        | Buffered, filtered, optimized                |
-
-<br/>
 
 ---
 
