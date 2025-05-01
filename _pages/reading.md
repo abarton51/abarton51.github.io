@@ -62,11 +62,11 @@ Books are rated within their respective genre. Books I personally don't like or 
 
 #### The Wheel of Time
 
-| Book | Author | Rating | Book |
+| Book | Author | Rating | Book Number |
 |------|---------|------|---------|
-| _The Dragon Reborn_ | Robert Jordan | 8.9 | Book 3 |
-| _The Great Hunt_ | Robert Jordan | 9.0 | Book 2 |
-| _The Eye of the World_ | Robert Jordan | 9.1 | Book 1 |
+| _The Dragon Reborn_ | Robert Jordan | 8.9 | 3 |
+| _The Great Hunt_ | Robert Jordan | 9.1 | 2 |
+| _The Eye of the World_ | Robert Jordan | 9.0 | 1 |
 
 
 ### Non-Fiction
