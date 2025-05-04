@@ -14,7 +14,7 @@ redirect_from:
 <!-- Modal -->
 <div id="pdf-modal" style="display:none;">
   <div id="pdf-modal-content">
-    <iframe src="{{ site.baseurl }}/assets/pdfs/Barton_Austin_T_Resume-2.pdf" width="100%" height="95%"></iframe>
+    <iframe src="{{ site.baseurl }}/assets/pdfs/Barton_Austin_T_Resume.pdf" width="100%" height="95%"></iframe>
     <button id="close-modal">Close</button>
   </div>
 </div>
@@ -105,7 +105,7 @@ redirect_from:
 {% include base_path %}
 
 ## Education
-- (Current) M.S. in Cybersecurity, Montana State University, 2025-2026
+- (Current) M.S. in Cybersecurity, Montana State University, 2025-2027
 * B.S. in Mathematics and Computer Science, Georgia Institute of Technology, 2021-2025
 
 ## Research experience
