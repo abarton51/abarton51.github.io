@@ -6,15 +6,15 @@ permalink: /posts/2025/05/05/eager-vs-lazy-loading.md/
 author: 'Austin Barton'
 ---
 
-This is a practical overview with real examples that demonstrate how eager and lazy loading work and when to use each. This post starts at the high conceptual level and eventually makes its way down to understanding the system-level implications.
+This is an instructive overview with real examples that demonstrate how eager and lazy loading work and when to use each. This post starts at the high conceptual level and eventually makes its way down to understanding the system-level implications.
 
 To demonstrate more comprehensive usages of lazy loading and evaluation, we compare [Pandas](https://pandas.pydata.org/) and [Polars](https://docs.pola.rs/api/python/stable/reference/index.html) and examine Polars's DataFrame and LazyFrame objects.
 
 ## Introduction
 
-In this lesson, we’ll explore the difference between eager and lazy evaluation/loading — two fundamental strategies for resource management in software development.
+In this lesson, we’ll explore the difference between eager and lazy loading/evaluation — two fundamental strategies for resource management in software development.
 
-We'll use Rust as our language of choice to learn lazy loading/evaluation. Part of the reason we are using Rust here is because:
+We'll use Rust as our language of choice to learn lazy loading. Part of the reason we are using Rust here is because:
 - Rust is a "low-level" language and thus, it makes you explicitly manage memory and execution flow, helping to build a deeper understanding of how and when data is loaded, computed, and accessed.
 - **Polars** is a Python data manipulation library written in Rust. Later in this blog post, we will use the Pandas and Polars libraries to illustrate eager and lazy loading examples.
 
@@ -96,7 +96,7 @@ You're at a buffet but only get up to get food when you're actually hungry for t
 
 ## Eager vs. Lazy: Walkthrough in Rust
 
-Rust makes it easy to express both patterns safely and efficiently, using the type system and zero-cost abstractions.
+Rust makes it easy to express both patterns safely and efficiently.
 
 We will walk through:
 - Eager loading via regular struct construction.
@@ -224,13 +224,7 @@ While this makes the API intuitive and results immediate, it doesn't scale well 
 - `pl.DataFrame`: Eager execution, similar to Pandas.
 - `pl.LazyFrame`: Lazy execution. Operations are deferred and compiled into a query plan, only executing when `.collect()` is called, which returns a `DataFrame`.
 
-Additionally, by being written in Rust, Polars benefits from:
-- Zero-cost abstractions
-- Fine-grained memory control
-- Native multithreading
-- SIMD-accelerated operations
-
-### Pandas: Eager Execution Only
+### Pandas: Eager Loading
 
 ```python
 import pandas as pd
@@ -249,7 +243,7 @@ df = pd.read_csv("huge.csv")
 - Intermediate resources can cause extra allocations and Garbage Collector (GC) pressure.
 - High memory usage even for operations that only need a few columns.
 
-### Polars: Eager and Lazy Execution
+### Polars: Lazy Loading
 
 ```python
 import polars as pl
@@ -323,22 +317,6 @@ Polars' lazy execution engine builds a deferred computation plan rather than exe
 - Stream data in batches to reduce memory pressure.
 - Avoid redundant computations or data loads.
 - Leverage just-in-time (JIT) style deferred execution where nothing happens until `.collect()` is called.
-
-{/*
-**Conceptual Example with Rust-like Mock Code**
-
-```rust
-let lf = LazyCsvReader::new("huge.csv")
-	.has_header(true)
-	.finish()?; // returns a LazyFrame
-
-let result = lf
-	.filter(col("age").gt(lit(30)))
-	.group_by([col("city")])
-	.agg([col("salary").mean()])
-	.collect()?; // Execution is triggered here
-```
-*/}
 
 ### How the Execution Pipeline Works
 
