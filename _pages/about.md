@@ -20,6 +20,8 @@ I have a strong background in mathematics, statistics, and data science, and am 
 
 I am interested in researching applications and theory at the intersection of data science, IT, and cybersecurity. Some specific interests I have are vulnerability analysis and detection, adversarial machine learning, and anomaly detection.
 
+If you are interested in some of these topics, check out my [blog](https://austinbarton.com).
+
 ## **:mountain: Beyond Work and Studies**
 
 In my free time I like to train crossfit, BJJ, climbing, and Muay Thai. I love the outdoors, health and fitness, and sports/activities such as mountian biking, climbing, surfing, and snowboarding.
