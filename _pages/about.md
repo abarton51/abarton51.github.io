@@ -24,15 +24,8 @@ If you are interested in some of these topics, check out my [blog](https://austi
 
 ## **:mountain: Beyond Work and Studies**
 
-In my free time I like to train crossfit, BJJ, climbing, and Muay Thai. I love the outdoors, health and fitness, and sports/activities such as mountian biking, climbing, surfing, and snowboarding.
+In my free time I like to train crossfit, martial arts, and climbing. I love the outdoors, health and fitness, and sports/activities such as mountian biking, climbing, surfing, and snowboarding.
 
 ![](../images/me_collage-1.png)
 _Touching grass_
-
-## **:us: Marines**
-
-I served 4 years as active duty enlisted in the U.S. Marine Corps as an Infantry Assaultman (MOS 0351). I entered as a Private (E-1) and was honorably discharged as a Sergeant (E-5).
-
-![](../images/djibouti_cropped.png)
-_Djibouti, Africa, F 2/6 Marines_
 
