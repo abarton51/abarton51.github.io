@@ -16,5 +16,5 @@ end
 
 gem 'json', ">= 2.10.2"
 gem "webrick", "~> 1.8"
-gem "nokogiri", ">= 1.18.4"
+gem "nokogiri", ">= 1.18.8"
 
